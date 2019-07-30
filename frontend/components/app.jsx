@@ -12,6 +12,7 @@ const App = () => (
 
         <Route path="/signup" component={SignupContainer} />
         <Route path="/" component={NavBarContainer} />
+        {/* <Route path="/user" component={NavBarContainer} /> */}
     </div>
 );
 

@@ -13,8 +13,8 @@ export default (state = _nullSession, action) => {
         case LOGOUT_CURRENT_USER:
             return _nullSession;
         default:
-            return state
+            return state;
     }
     
 
-}
+};
