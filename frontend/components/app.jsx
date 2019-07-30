@@ -1,8 +1,9 @@
 import React from 'react';
 import SignupContainer from './session/signup_container';
 import { Route } from 'react-router-dom';
-// import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import NavBarContainer from './nav_bar/nav_bar_container';
+
 
 const App = () => (
     <div>
@@ -10,7 +11,7 @@ const App = () => (
             <h1>Yoricks Stacks</h1>
         </header>
 
-        <Route path="/signup" component={SignupContainer} />
+        <AuthRoute path="/signup" component={SignupContainer} />
         <Route path="/" component={NavBarContainer} />
         {/* <Route path="/user" component={NavBarContainer} /> */}
     </div>
