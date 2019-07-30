@@ -12,4 +12,6 @@ const configureStore = (preloadedState = {}) => (
     )
 );
 
+const x = 'x';
+
 export default configureStore;
