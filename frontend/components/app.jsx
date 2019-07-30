@@ -2,6 +2,7 @@ import React from 'react';
 import SignupContainer from './session/signup_container';
 import { Route } from 'react-router-dom';
 // import { AuthRoute } from '../util/route_util';
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = () => (
     <div>
@@ -9,7 +10,8 @@ const App = () => (
             <h1>Yoricks Stacks</h1>
         </header>
 
-        <Route exact path="/" component={SignupContainer} />
+        <Route path="/signup" component={SignupContainer} />
+        <Route path="/" component={NavBarContainer} />
     </div>
 );
 
