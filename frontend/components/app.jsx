@@ -14,8 +14,11 @@ const App = () => (
         <Route path="/" component={NavBarContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
-        
-        {/* <Route path="/user" component={NavBarContainer} /> */}
+        <Route exact path="/questions" component={QuestionsAllContainer} />
+        <Route path="/questions/new" component={QuestionNewContainer} />
+        <Route path="/question/:questionId" component={QuestionShowContainer} />
+
+        {/* <Route path="/" component={FooterContainer} /> */}
     </div>
 );
 
