@@ -6,7 +6,7 @@ class Api::QuestionsController < ApplicationController
         if @question.save
             render 'api/questions/show'
         else
-            render :json @question.errors.full_messages, status: 402
+            render json: @question.errors.full_messages, status: 402
         end
 
     end
