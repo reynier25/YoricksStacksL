@@ -35,7 +35,7 @@ class Api::QuestionsController < ApplicationController
         if @question.update(question_params)
             render 'api/questions/show'
         else
-            json: @question.errors.full_messages, status: 422
+            render json: @question.errors.full_messages, status: 422
         end
     end
 
