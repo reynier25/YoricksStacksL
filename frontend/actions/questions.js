@@ -1,4 +1,4 @@
-import * as APIUtil from '../utils/session';
+import * as APIUtil from '../utils/questions';
 // postQuestion, fetchQuestions, fetchQuestion, deleteQuestion, updateQuestion
 export const RECEIVE_QUESTION = 'RECEIVE_QUESTION';
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';

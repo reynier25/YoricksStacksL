@@ -6,11 +6,10 @@ export const postQuestion = (question) => (
     })
 );
 
-export const fetchQuestions = (questions) => (
+export const fetchQuestions = () => (
     $.ajax({
         method: 'GET',
-        url: 'api/questions',
-        data: { questions }
+        url: 'api/questions'
     })
 );
 
@@ -32,7 +31,7 @@ export const updateQuestion = (question) => (
     $.ajax({
         method: 'GET',
         url: 'api/questions',
-        data: { questions }
+        data: { question }
     })
 );
 
