@@ -23,10 +23,20 @@ class Api::QuestionsController < ApplicationController
 
     end
 
-    def edit
+    # def edit
+    #     @question = Question.find(params[:id])
+
+    #     render 'api/questions/edit'
+    # end
+
+    def update
         @question = Question.find(params[:id])
 
-        render 'api/questions/edit'
+        if @question.update(question_params)
+            render 'api/questions/show'
+        else
+            json: @question.errors.full_messages, status: 422
+        end
     end
 
     def destroy
