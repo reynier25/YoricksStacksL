@@ -3,6 +3,11 @@ class User < ApplicationRecord
     validates :username, :email, :password_digest, :session_token, presence: true
     validates :password, length: { minimum: 6, allow_nil: true }
 
+    has_many :questions,
+    clas_name: :Question,
+    primary_key: :id,
+    foreign_key: :author_id
+
     after_initialize :ensure_session_token
 
     attr_reader :password
