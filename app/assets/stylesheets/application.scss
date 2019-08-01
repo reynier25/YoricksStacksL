@@ -54,23 +54,69 @@
 
  .nav-bar {
    display: flex;
-   justify-content: space-between;
+  //  justify-content: space-between;
    padding: 20px;
    background: rgb(255, 255, 255);
    align-items: center;
-   .btn {
+   .greeting{
+       position: absolute;
+  bottom: 520px;
+  left: 16px;
+  font-size: 18px;
+   }
+
+   .logo {
+    font-weight: lighter;
+   }
+   .signupbtn {
      color: white;
-     background-color: rgb(37, 123, 236);
+     background-color: rgb(41, 130, 247);
      padding: 10px;
      box-shadow: 3px 3px 3px rgb(220, 220, 228);
      text-decoration: none;
      border-radius: 10%;
+     border: 2px solid rgb(33, 107, 204);
 
+     position: absolute;
+     top: 8px;
+     right: 16px;
+     font-size: 18px;
+   }
+
+   .loginbtn {
+     color: rgb(22, 111, 163);
+     background-color: rgb(255, 255, 255);
+     padding: 10px;
+    //  box-shadow: 3px 3px 3px rgb(220, 220, 228);
+     text-decoration: none;
+     border-radius: 10%;
+
+     position: absolute;
+     top: 8px;
+     right: 105px;
+     font-size: 18px;
+   }
+
+   .logoutbtn {
+     color: rgb(22, 111, 163);
+     background-color: rgb(255, 255, 255);
+     padding: 10px;
+    //  box-shadow: 3px 3px 3px rgb(220, 220, 228);
+     text-decoration: none;
+     border-radius: 10%;
+
+     position: absolute;
+     top: 8px;
+     right: 16px;
+     font-size: 18px;
    }
   //  .btn:hover {
   //   background-color: rgb(240, 240, 240);
   //   box-shadow: 1px 1px 1px darkblue;
   //  }
+  .mainlogo {
+    width: 7%;
+  }
  }
 
  .session-form {

@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= image_tag 'so-logo-s.png' %>
+    <%# <%= image_tag 'so-logo-s.png' %>
 
     <% if current_user %>
       <script>
@@ -17,7 +17,13 @@
           "email": "<%= current_user.email %>"
           };
       </script>
+      
     <% end %>
+
+    <script>
+    window.img = "<%= image_url('so-logo-s.png') %>"
+    window.ne = "hello";
+    </script>
 
   </head>
 

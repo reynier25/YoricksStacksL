@@ -14,6 +14,7 @@ const App = () => (
         <Route path="/" component={NavBarContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
+        {/* <img src={window.img} alt=""/> */}
         
         {/* <Route path="/user" component={NavBarContainer} /> */}
     </div>
