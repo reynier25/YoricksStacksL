@@ -45,34 +45,33 @@ class Signup extends React.Component {
         return (
             <div className="session-form">
                 <h2>Create your Yoricks Stacks account. It’s free and only takes a minute.</h2>
-                <h2>{this.renderErrors()}</h2>
                 <form>
-                    
+
                     <label>Display name
-                        <br/>
-                        <input type="text" value={this.state.username} onChange={this.handleInput('username')}/>
+                        <br />
+                        <input type="text" value={this.state.username} onChange={this.handleInput('username')} />
 
                     </label>
 
                     <label>Email
-                        <br/>
+                        <br />
                         <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
 
                     </label>
 
                     <label>Password
-                        <br/>
+                        <br />
                         <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
 
                     </label>
 
                     <button onClick={this.handleSubmit}>Sign Up</button>
                 </form>
-                
+
             </div>
         );
     }
-    
+
 };
 
 export default Signup;
