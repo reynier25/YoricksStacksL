@@ -42,7 +42,7 @@ class Login extends React.Component {
 
                     </label>
 
-                    <button onClick={this.handleSubmit}>Sign In</button>
+                    <button onClick={this.handleSubmit}>Log In</button>
                 </form>
 
             </div>

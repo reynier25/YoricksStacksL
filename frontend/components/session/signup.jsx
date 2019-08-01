@@ -28,23 +28,23 @@ class Signup extends React.Component {
     render() {
         return (
             <div className="session-form">
-                <h2>Sign Up</h2>
+                <h2>Create your Yoricks Stacks account. It’s free and only takes a minute.</h2>
                 <form>
                     
-                    <label>Username:
-                        
+                    <label>Username
+                        <br/>
                         <input type="text" value={this.state.username} onChange={this.handleInput('username')}/>
 
                     </label>
 
-                    <label>Email:
-
+                    <label>Email
+                        <br/>
                         <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
 
                     </label>
 
-                    <label>Password:
-
+                    <label>Password
+                        <br/>
                         <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
 
                     </label>
