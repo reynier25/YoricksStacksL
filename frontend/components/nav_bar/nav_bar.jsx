@@ -5,7 +5,7 @@ export default (state) => {
     const display = state.currentUser ? (
         <div>
             <p>Hello, {state.currentUser.username} </p>
-            <button onClick={state.logout}>Log Out</button>
+            <button className="btn" onClick={state.logout}>Log Out</button>
         </div>
     ) : (
             <div>
