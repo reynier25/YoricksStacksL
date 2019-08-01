@@ -25,10 +25,27 @@ class Signup extends React.Component {
             .then(() => this.props.history.push('/questions'))
     }
 
+    renderErrors() {
+        return (
+            <div>
+                <ul>
+                    {this.props.errors.map((error, index) => (
+                        <li key={`${index}`}>
+                            {error}
+                        </li>
+                    )
+                    )
+                    }
+                </ul>
+            </div>
+        );
+    }
+
     render() {
         return (
             <div className="session-form">
                 <h2>Create your Yoricks Stacks account. It’s free and only takes a minute.</h2>
+                <h2>{this.renderErrors()}</h2>
                 <form>
                     
                     <label>Username
