@@ -6,3 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+user1 = User.create(username: 'Hamlet', email: 'hamlet@shakespeare.com', password: '123456')
+user2 = User.create(username: 'Horatio', email: 'horatio@shakespeare.com', password: '123456')
+user3 = User.create(username: 'Yorick', email: 'yorick@shakespeare.com', password: '123456')
+
+question1 = Question.create(title: 'Didst anyone knoweth Yorick?', body: 'well?', author_id: user2.id)
+question2 = Question.create(title: 'Art Rosencrantz and Guildenstern dead?', body: 'I hast a book idea ift be true', author_id: user1.id)

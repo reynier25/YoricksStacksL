@@ -22,16 +22,39 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createNewUser(this.state)
-            .then(() => this.props.history.push('/users'))
+            .then(() => this.props.history.push('/questions'))
+    }
+
+    renderErrors() {
+        return (
+            <div>
+                <ul>
+                    {this.props.errors.map((error, index) => (
+                        <li key={`${index}`}>
+                            {error}
+                        </li>
+                    )
+                    )
+                    }
+                </ul>
+            </div>
+        );
     }
 
     render() {
         return (
             <div className="session-form">
                 <h2>Create your Yoricks Stacks account. It’s free and only takes a minute.</h2>
+<<<<<<< HEAD
                 <form>
                     
                     <label>Display name
+=======
+                <h2>{this.renderErrors()}</h2>
+                <form>
+                    
+                    <label>Username
+>>>>>>> a608bfedb6ea4b4e53e9fa2b09afa93c54be53eb
                         <br/>
                         <input type="text" value={this.state.username} onChange={this.handleInput('username')}/>
 

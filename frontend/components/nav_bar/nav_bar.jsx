@@ -12,8 +12,8 @@ export default (state) => {
                 <Link className="loginbtn" to="/login">Log In</Link>
                 <Link className="signupbtn" to="/signup">Sign Up</Link>
             </div>
-    );
-    
+        );
+
     return (
         <header className="nav-bar">
             <img src={window.img} className="mainlogo" />
