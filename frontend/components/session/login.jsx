@@ -49,14 +49,14 @@ class Login extends React.Component {
                 
                 <form>
 
-                    <label>Username:
-
+                    <label>Username
+                        <br/>
                         <input type="text" value={this.state.username} onChange={this.handleInput('username')} />
 
                     </label>
 
-                    <label>Password:
-
+                    <label>Password
+                        <br/>
                         <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
 
                     </label>
