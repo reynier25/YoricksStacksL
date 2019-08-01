@@ -48,7 +48,7 @@ class Signup extends React.Component {
                 <h2>{this.renderErrors()}</h2>
                 <form>
                     
-                    <label>Username
+                    <label>Display name
                         <br/>
                         <input type="text" value={this.state.username} onChange={this.handleInput('username')}/>
 
