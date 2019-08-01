@@ -9,9 +9,8 @@ export default (state) => {
         </div>
     ) : (
             <div>
-                <Link className="btn" to="/signup">Sign Up</Link>
-                <br/>
                 <Link className="btn" to="/login">Log In</Link>
+                <Link className="btn" to="/signup">Sign Up</Link>
             </div>
     );
     
