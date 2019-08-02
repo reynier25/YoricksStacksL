@@ -42,7 +42,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="session-form">
+            <div className="session-form-login">
                 <h2>Log In</h2>
                 {/* <div className="errors">{this.renderErrors()}</div> */}
                 <h2>{this.renderErrors()}</h2>
