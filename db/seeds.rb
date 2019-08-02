@@ -6,10 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Question.destroy_all
 
 user1 = User.create(username: 'Hamlet', email: 'hamlet@shakespeare.com', password: '123456')
 user2 = User.create(username: 'Horatio', email: 'horatio@shakespeare.com', password: '123456')
 user3 = User.create(username: 'Yorick', email: 'yorick@shakespeare.com', password: '123456')
+user4 = User.create(username: 'Vladimir', email: 'vladimir@shakespeare.com', password: '123456')
+user5 = User.create(username: 'Estragon', email: 'estragon@shakespeare.com', password: '123456')
+user6 = User.create(username: 'Interlocutor', email: 'interlocutor@shakespeare.com', password: '123456')
+user7 = User.create(username: 'Ludwig Wittgenstein', email: 'wittgenstein@shakespeare.com', password: '123456')
+
+
+
 
 question1 = Question.create(title: 'Didst anyone knoweth Yorick?', body: 'well?', author_id: user2.id)
 question2 = Question.create(title: 'Art Rosencrantz and Guildenstern dead?', body: 'I hast a book idea ift be true', author_id: user1.id)
+question3 = Question.create(title: 'Is it a carrot or a turnip?', body: 'I am not sure', author_id: user4.id)
+question4 = Question.create(title: 'What is the world?', body: 'Start from the beginning', author_id: user6.id)
+

@@ -19,12 +19,12 @@ import { Link } from 'react-router-dom'
 class QuestionItem extends React.Component {
     render() {
         return (
-        <li>
-            <h3><Link to={`/questions/${this.props.question.id}`}>{this.props.question.title}</Link></h3>
-            <p>Asked by: {this.props.question.author_id}</p>
-            <p>{this.props.question.body}</p>
-            <br />
-        </li>
+        <div>
+            <p><Link to={`/questions/${this.props.question.id}`}>{this.props.question.title}</Link></p>
+                <p>Asked by: {this.props.question.username}</p>
+                
+            {/* <p>{this.props.question.body}</p> */}
+        </div>
 
         )
     }

@@ -15,7 +15,7 @@ class QuestionIndex extends React.Component {
         const { questions } = this.props;
 
         return (
-            <div>
+            <header className = "all-questions">Top Questions
                 <ul>
                     {
                         questions.map(question => (
@@ -26,7 +26,7 @@ class QuestionIndex extends React.Component {
                         )
                     }
                 </ul>
-            </div>
+            </header>
         )
     }
 
