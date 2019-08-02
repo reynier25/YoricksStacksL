@@ -21,6 +21,7 @@
    margin: 0;
    font-family: sans-serif;
    border-top: 3px solid rgb(231, 135, 9);
+   background-color: white;
  }
 
    div, body {
@@ -29,6 +30,11 @@
    font-family: sans-serif;
    background-color: rgb(236, 236, 236);
  }
+
+  head {
+    background-color: red;
+    height: 100px;
+  }
 
 //  .hero-img-frame {
 //    position: absolute;
@@ -62,9 +68,12 @@
 
  .nav-bar {
    display: flex;
+  //  position: absolute;
+  //  top: 0px;
   //  justify-content: space-between;
    padding: 0px;
-   background: rgb(255, 255, 255);
+   height: 30px;
+   background-color: rgb(255, 255, 255);
    align-items: center;
 
    .greeting{
@@ -77,14 +86,14 @@
    .logo {
     font-weight: lighter;
      position: absolute;
-     top: 0px;
+     top: 3px;
      left: 68px;
    }
 
    .logo2 {
      font-weight: bold;
      position: absolute;
-     top: 0px;
+     top: 3px;
      left: 120px;
    }
 
@@ -159,7 +168,7 @@
    display: flex;
    flex-direction: column;
    width: 100%;
-   height: 65vh;
+   height: 92vh;
    justify-content: center;
    align-items: center;
    font-weight: bold;
@@ -175,6 +184,8 @@
     //  border: 1px solid gray;
      border-radius: 3%;
      box-shadow: 0px 0px 10px 5px #dad9d9;
+    //  position: absolute;
+    //  top: 200px;
     //  border-style: groove;
 
      input {
