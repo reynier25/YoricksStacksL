@@ -18,8 +18,8 @@ export default (state) => {
         <header className="nav-bar">
             <img src={window.img} className="mainlogo" />
             {/* <Link className="logo" to="/">YoricksStacks</Link> */}
-            <h1 className="logo">Yoricks</h1>
-            <h1 className="logo2">Stacks</h1>
+            <p className="logo">Yoricks</p>
+            <p className="logo2">Stacks</p>
             <div>
                 {display}
             </div>
