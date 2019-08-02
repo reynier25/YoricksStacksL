@@ -3,7 +3,8 @@ import React from 'react';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import QuestionIndexContainer from './questions/question_index_container';
-import { Route } from 'react-router-dom';
+import QuestionShowContainer from './questions/question_show_container';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import NavBarContainer from './nav_bar/nav_bar_container';
 
@@ -14,9 +15,12 @@ const App = () => (
             <h1></h1>
         </header>
         <Route path="/" component={NavBarContainer} />
-        <AuthRoute path="/login" component={LoginContainer} />
-        <AuthRoute path="/signup" component={SignupContainer} />
-        <ProtectedRoute path="/questions" component={QuestionIndexContainer} />
+        <Switch>
+            <AuthRoute path="/login" component={LoginContainer} />
+            <AuthRoute path="/signup" component={SignupContainer} />
+            <ProtectedRoute exact path="/questions" component={QuestionIndexContainer} />
+            <ProtectedRoute path="/questions/:questionId" component={QuestionShowContainer} />
+        </Switch>
         {/* <img src={window.img} alt=""/> */}
 
         {/* <Route path="/user" component={NavBarContainer} /> */}
