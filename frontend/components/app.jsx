@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import LeftNavBarContainer from './nav_bar/left_nav_bar_container';
+import QuestionNewContainer from './questions/question_new_container';
 import LeftNavBar from './nav_bar/left_nav_bar';
 import { withRouter } from 'react-router'
 
@@ -29,7 +30,7 @@ const App = () => (
             <AuthRoute path="/signup" component={SignupContainer} />
             <Route exact path="/questions" component={QuestionIndexContainer} />
             <Route path="/questions/:questionId" component={QuestionShowContainer} />
-            <ProtectedRoute path="/newquestion" />
+            <ProtectedRoute path="/newquestion" component={QuestionNewContainer}/>
 
         </Switch>
         {/* <img src={window.img} alt=""/> */}
