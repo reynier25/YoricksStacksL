@@ -91,7 +91,7 @@
    position: fixed;
    width: 100%;
    border-top: 3px solid rgb(231, 135, 9);
-  //  border-bottom: 1px solid gray;
+   border-bottom: 1px solid rgb(199, 199, 199);
    box-shadow: 3px 1px 3px rgb(220, 220, 228);
 
 
@@ -191,6 +191,7 @@
  }
 
  .session-form-login {
+  //  border: 10px solid black;
    background-color: rgb(233, 233, 233);
    display: flex;
    flex-direction: column;
@@ -258,10 +259,12 @@
 
 
   .session-form-signup {
+   background-color: rgb(233, 233, 233);
    display: flex;
+  //  padding-top: 100px;
    flex-direction: column;
    width: 100%;
-   height: 92vh;
+   height: 690px;
    justify-content: center;
    align-items: center;
    font-weight: bold;
