@@ -100,6 +100,7 @@
   //  justify-content: space-between;
   // border: 30px, solid gray;
    padding: 0px;
+  //  padding-left: 600px;
    height: 47px;
    background-color: rgb(255, 255, 255);
    align-items: center;
@@ -314,8 +315,10 @@
 
  .all-questions {
   //  border: 30px, solid gray;
+  // display: inline-block;
    background-color: white;
    padding: 45px;
+   padding-left: 170px;
   //  height: 50px;
    width: 750px;
    font-size: 28px;
@@ -399,3 +402,14 @@
      background-color: red;
      border: 10px solid red;
    }
+
+
+
+  .left-nav-bar {
+    display: flex;
+    position: fixed;
+    width: 170px;
+    height: 800px;
+    font-size: 30px;
+    padding-top: 50px;
+  }

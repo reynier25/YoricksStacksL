@@ -7,7 +7,7 @@ import QuestionShowContainer from './questions/question_show_container';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import NavBarContainer from './nav_bar/nav_bar_container';
-
+import LeftNavBarContainer from './nav_bar/left_nav_bar_container';
 
 const App = () => (
     <div>
@@ -15,6 +15,8 @@ const App = () => (
             <h1></h1>
         </header> */}
         <Route path="/" component={NavBarContainer} />
+        <Route path="/" component={LeftNavBarContainer} />
+
         <Switch>
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
