@@ -8,20 +8,29 @@ import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import LeftNavBarContainer from './nav_bar/left_nav_bar_container';
+import LeftNavBar from './nav_bar/left_nav_bar';
+import { withRouter } from 'react-router'
+
+// render = {(props) => <Navigation {...props}
 
 const App = () => (
     <div>
         {/* <header>
             <h1></h1>
         </header> */}
+        {/* {location.pathname !== '/login'} */}
         <Route path="/" component={NavBarContainer} />
         <Route path="/" component={LeftNavBarContainer} />
+        {/* <Route path="/" render={(props) => <LeftNavBar {...props} />} /> */}
 
+        
         <Switch>
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
-            <ProtectedRoute exact path="/questions" component={QuestionIndexContainer} />
-            <ProtectedRoute path="/questions/:questionId" component={QuestionShowContainer} />
+            <Route exact path="/questions" component={QuestionIndexContainer} />
+            <Route path="/questions/:questionId" component={QuestionShowContainer} />
+            <ProtectedRoute path="/newquestion" />
+
         </Switch>
         {/* <img src={window.img} alt=""/> */}
 
@@ -29,7 +38,7 @@ const App = () => (
     </div>
 );
 
-export default App;
+export default App
 
 /*{<AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />}*/

@@ -30,7 +30,7 @@
    padding: 0;
    margin: 0;
    font-family: sans-serif;
-   background-color: rgb(236, 236, 236);
+   background-color: rgb(255, 255, 255);
   //  border: 3px, solid black;
  }
 
@@ -191,10 +191,12 @@
  }
 
  .session-form-login {
+   background-color: rgb(233, 233, 233);
    display: flex;
    flex-direction: column;
    width: 100%;
-   height: 92vh;
+  //  height: 92vh;
+  height: 690px;
    justify-content: center;
    align-items: center;
    font-weight: bold;
@@ -411,5 +413,6 @@
     width: 170px;
     height: 800px;
     font-size: 30px;
-    padding-top: 50px;
+    padding-top: 52px;
+    // background-color: white;
   }
