@@ -315,12 +315,13 @@
  .all-questions {
   //  border: 30px, solid gray;
    background-color: white;
+   padding: 45px;
   //  height: 50px;
    width: 750px;
    font-size: 28px;
-   position: absolute;
-   left: 200px;
-   top: 80px;
+  //  position: absolute;
+  //  left: 200px;
+  //  top: 80px;
 
    div {
      background-color: white;
@@ -331,6 +332,8 @@
    }
 
    .new-question-btn {
+     float: right;
+    //  padding: 200px;
      color: white;
      background-color: rgb(41, 130, 247);
      padding: 12px 8px 12px;
@@ -338,10 +341,11 @@
      text-decoration: none;
      border-radius: 10%;
      border: 1px solid rgb(33, 107, 204);
+     width: 12%;
 
-     position: absolute;
-     top: -15px;
-     right: 75px;
+    //  position: absolute;
+    //  top: -15px;
+    //  right: 75px;
      font-size: 11px;
     //  text-decoration: none;
    }

@@ -16,8 +16,12 @@ class QuestionIndex extends React.Component {
         const { questions } = this.props;
 
         return (
-            <header className = "all-questions">Top Questions
-                <ul>
+            <header className="all-questions">
+                {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
+                <ul>Top Questions
+
+                    <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p>
+
                     {
                         questions.map(question => (
                             <QuestionItem
@@ -27,7 +31,7 @@ class QuestionIndex extends React.Component {
                         )
                     }
                 </ul>
-                <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p>
+                {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                 {/* <button>Ask Question</button> */}
 
 
