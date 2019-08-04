@@ -36,11 +36,12 @@ class QuestionShow extends React.Component {
 
         return (
             
-            <p className="question-show">
-                {this.props.question.title}
+            <div className="question-show">
+                <h2>{this.props.question.title}</h2>
                 {this.props.question.body}
+                <h2>{this.props.question.username}</h2>
                 {/* {localStorage.getItem([this.props.match.params.questionId])} */}
-            </p>
+            </div>
         )
     }
 
