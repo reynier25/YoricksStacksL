@@ -16,7 +16,7 @@ export default () => {
 
     // const { match, location, history } = this.props
 
-    if (window.location.hash === "#/signup" || window.location.hash === "#/login") {
+    if (window.location.hash === "#/signup" || window.location.hash === "#/login" || window.location.hash === "#/newquestion") {
         display = null;
     }
 

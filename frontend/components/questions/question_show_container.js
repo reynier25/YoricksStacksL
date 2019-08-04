@@ -3,7 +3,9 @@ import QuestionShow from './question_show';
 import { fetchQuestion } from '../../actions/questions';
 
 const mapStateToProps = (state, ownProps) => ({
-    question: state.entities.questions[ownProps.match.params.questionId]
+    questionId: ownProps.match.params.questionId,
+    question: state.entities.questions[ownProps.match.params.questionId],
+    question1: state.entities
 });
 
 const mapDispatchToProps = dispatch => {

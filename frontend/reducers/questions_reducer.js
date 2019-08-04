@@ -6,7 +6,7 @@ export default (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_QUESTION:
-            return Object.assign({}, { [action.question.id]: action.question });
+            return Object.assign({}, state, { [action.question.id]: action.question });
         case RECEIVE_QUESTIONS:
             const questions = {};
             action.questions.forEach(question => {

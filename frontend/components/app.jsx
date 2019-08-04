@@ -4,10 +4,12 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import QuestionIndexContainer from './questions/question_index_container';
 import QuestionShowContainer from './questions/question_show_container';
+// import QuestionShow from './questions/question_show';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import LeftNavBarContainer from './nav_bar/left_nav_bar_container';
+import QuestionNew from './questions/question_new';
 import QuestionNewContainer from './questions/question_new_container';
 import LeftNavBar from './nav_bar/left_nav_bar';
 import { withRouter } from 'react-router'
@@ -29,8 +31,13 @@ const App = () => (
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
             <Route exact path="/questions" component={QuestionIndexContainer} />
-            <Route path="/questions/:questionId" component={QuestionShowContainer} />
-            <ProtectedRoute path="/newquestion" component={QuestionNewContainer}/>
+
+            <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
+            <ProtectedRoute exact path="/newquestion" component={QuestionNewContainer} />
+
+            {/* <Route path="/questions/:questionId" render={(props) => <QuestionShow {...props} />} /> */}
+            {/* <ProtectedRoute path="/newquestion" component={QuestionNewContainer} /> */}
+
 
         </Switch>
         {/* <img src={window.img} alt=""/> */}

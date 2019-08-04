@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 //Components
 import Root from './components/root';
 import configureStore from './store/store';
+import { persistStore, autoRehydrate } from 'redux-persist';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,4 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const store = configureStore(preloadedState);
     ReactDOM.render(<Root store={store} />, root);
+
 });
+
+
+// persistStore(store, {}, () => {
+//     ReactDOM.render(<Root store={store} />, root);
+// })
