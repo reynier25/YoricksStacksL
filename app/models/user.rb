@@ -21,6 +21,11 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :author_id
 
+    has_many :answers,
+    class_name: :Answer,
+    primary_key: :id,
+    foreign_key: :author_id
+
     after_initialize :ensure_session_token
 
     attr_reader :password
