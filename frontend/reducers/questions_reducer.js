@@ -1,4 +1,5 @@
 import { RECEIVE_QUESTION, RECEIVE_QUESTIONS } from '../actions/questions';
+import { RECEIVE_ANSWER } from '../actions/answers';
 
 
 export default (state = {}, action) => {

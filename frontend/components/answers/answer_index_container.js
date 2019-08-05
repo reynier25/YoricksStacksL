@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchAnswers: () => dispatch(fetchAnswers())
+    fetchAnswers: (id) => dispatch(fetchAnswers(id))
 });
 
 

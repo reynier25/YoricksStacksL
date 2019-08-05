@@ -22,7 +22,7 @@ export const fetchAnswer = (id) => dispatch => (
         .then(answer => dispatch(receiveAnswer(answer)))
 )
 
-export const fetchAnswers = () => dispatch => (
-    APIUtil.fetchAnswers()
+export const fetchAnswers = (id) => dispatch => (
+    APIUtil.fetchAnswers(id)
         .then(answers => dispatch(receiveAnswers(answers)))
 )

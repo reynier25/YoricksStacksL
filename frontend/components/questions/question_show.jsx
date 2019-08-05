@@ -30,13 +30,17 @@ class QuestionShow extends React.Component {
         const {question} = this.props;
         // if (!question) {
         //     return null;
-        // }
+        // 
 
         // localStorage.setItem(this.props.match.params.questionId, this.props.question.body);
+        if (!question) return null
+
 
         return (
             
             <div className="question-show">
+
+
                 <h2>{this.props.question.title}</h2>
                 {this.props.question.body}
                 <h2>{this.props.question.username}</h2>

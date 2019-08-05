@@ -12,7 +12,9 @@ class Api::AnswersController < ApplicationController
     end
 
     def index
-        @answers = Answer.all
+        question = params[:questionId]
+        @answers = Answer.where(question_id: question)
+        
         render 'api/answers/index'
     end
 

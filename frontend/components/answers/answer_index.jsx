@@ -7,7 +7,7 @@ class AnswerIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAnswers();
+        this.props.fetchAnswers(this.props.match.params.questionId);
     }
 
 
