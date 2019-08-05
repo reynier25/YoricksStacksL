@@ -13,10 +13,12 @@ class Api::AnswersController < ApplicationController
 
     def index
         @answers = Answer.all
+        render 'api/answers/index'
     end
 
     def show
         @answer = Answer.find(params[:id])
+        render 'api/answers/show'
     end
 
 

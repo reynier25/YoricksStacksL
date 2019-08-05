@@ -1,6 +1,6 @@
 import * as APIUtil from '../utils/answers';
-export const RECEIVE_ANSWER = 'RECEIVE_QUESTION';
-export const RECEIVE_ANSWERS = 'RECEIVE_QUESTIONS';
+export const RECEIVE_ANSWER = 'RECEIVE_ANSWER';
+export const RECEIVE_ANSWERS = 'RECEIVE_ANSWERS';
 
 const receiveAnswer = answer => ({
     type: RECEIVE_ANSWER,
@@ -22,7 +22,7 @@ export const fetchAnswer = (id) => dispatch => (
         .then(answer => dispatch(receiveAnswer(answer)))
 )
 
-export const fetchAnswers = (answers) => dispatch => (
-    APIUtil.fetchAnswers(answers)
+export const fetchAnswers = () => dispatch => (
+    APIUtil.fetchAnswers()
         .then(answers => dispatch(receiveAnswers(answers)))
 )

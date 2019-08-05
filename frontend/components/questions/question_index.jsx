@@ -14,7 +14,7 @@ class QuestionIndex extends React.Component {
 
     render() {
         const { questions } = this.props;
-        debugger;
+        // debugger;
         return (
             <header className="all-questions">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}

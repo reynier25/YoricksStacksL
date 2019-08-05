@@ -11,6 +11,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import LeftNavBarContainer from './nav_bar/left_nav_bar_container';
 import QuestionNew from './questions/question_new';
 import QuestionNewContainer from './questions/question_new_container';
+import AnswerIndexContainer from './answers/answer_index_container';
 import LeftNavBar from './nav_bar/left_nav_bar';
 import { withRouter } from 'react-router'
 
@@ -25,8 +26,8 @@ const App = () => (
         <Route path="/" component={NavBarContainer} />
         <Route path="/" component={LeftNavBarContainer} />
         {/* <Route path="/" render={(props) => <LeftNavBar {...props} />} /> */}
+        {/* <Route exact path="/questions/:questionId" component={AnswerIndexContainer} /> */}
 
-        
         <Switch>
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
@@ -38,8 +39,8 @@ const App = () => (
             {/* <Route path="/questions/:questionId" render={(props) => <QuestionShow {...props} />} /> */}
             {/* <ProtectedRoute path="/newquestion" component={QuestionNewContainer} /> */}
 
-
         </Switch>
+        <Route exact path="/questions/:questionId" component={AnswerIndexContainer} />
         {/* <img src={window.img} alt=""/> */}
 
         {/* <Route path="/user" component={NavBarContainer} /> */}
