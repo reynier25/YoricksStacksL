@@ -11,7 +11,7 @@ export default (state = {}, action) => {
         case RECEIVE_ANSWERS:
             const answers = {};
             const x = action.answers;
-            debugger;
+            // debugger;
             action.answers.forEach(answer => {
                 // if (answer.question_id === questionId) {
                     answers[answer.id] = answer;

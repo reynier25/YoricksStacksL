@@ -1,5 +1,7 @@
 import React from 'react';
 import QuestionItem from './question_item';
+import AnswerNewContainer from '../answers/answer_new_container';
+import AnswerIndexContainer from '../answers/answer_index_container';
 
 class QuestionShow extends React.Component {
     constructor(props) {
@@ -20,9 +22,9 @@ class QuestionShow extends React.Component {
         // this.setState({internalState}
     // }
 
-    // componentDidUpdate() {
-    //     this.props.fetchQuestion(this.props.match.params.questionId);
-    // }
+    componentDidUpdate() {
+        true;
+    }
 
 
     render() {
@@ -43,7 +45,12 @@ class QuestionShow extends React.Component {
 
                 <h2>{this.props.question.title}</h2>
                 {this.props.question.body}
-                <h2>{this.props.question.username}</h2>
+                <p>Asked by: {this.props.question.username}</p>
+
+                <AnswerIndexContainer questionId={this.props.questionId} />
+
+                <AnswerNewContainer questionId={this.props.questionId} />
+                
                 {/* {localStorage.getItem([this.props.match.params.questionId])} */}
             </div>
         )

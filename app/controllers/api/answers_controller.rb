@@ -2,10 +2,10 @@ class Api::AnswersController < ApplicationController
 
     def create
         @answer = Answer.new(answer_params)
-
+        # @answer.question_id = params[:questionId]
 
         if @answer.save
-            render json: 'api/answers/show'
+            render 'api/answers/show'
         else
             render @answer.errors.full_messages, status: 402
         end
@@ -14,7 +14,7 @@ class Api::AnswersController < ApplicationController
     def index
         question = params[:questionId]
         @answers = Answer.where(question_id: question)
-        
+
         render 'api/answers/index'
     end
 

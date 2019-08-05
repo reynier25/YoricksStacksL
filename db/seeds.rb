@@ -26,6 +26,6 @@ question4 = Question.create(title: 'What is the world?', body: 'Start from the b
 
 
 answer1 = Answer.create(body: 'Alas! Poor Yorick! I knew him, Horatio, a fellow of infinite jest, of most excellent fancy...', author_id: user1.id, question_id: question1.id)
-
+answer2 = Answer.create(body: 'present', author_id: user3.id, question_id: question1.id)
 
 

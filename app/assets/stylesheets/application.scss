@@ -21,8 +21,8 @@
    margin: 0;
    font-family: sans-serif;
   //  border-top: 3px solid rgb(231, 135, 9);
-   border-bottom: 1px solid rgb(214, 214, 214);
-   box-shadow: 3px 0px 3px rgb(220, 220, 228);
+  //  border-bottom: 1px solid rgb(214, 214, 214);
+  //  box-shadow: 3px 0px 3px rgb(220, 220, 228);
    background-color: white;
  }
 
@@ -324,24 +324,36 @@
   // display: inline-block;
    background-color: white;
    padding: 45px;
-   padding-left: 170px;
+  //  padding-left: 170px;
+   margin-left: 80px;
   //  height: 50px;
-   width: 750px;
-   font-size: 28px;
+   width: 700px;
+   font-size: 14px;
+  //  border: 10px solid black;
   //  position: absolute;
   //  left: 200px;
   //  top: 80px;
 
-   div {
-     background-color: white;
-   }
+  // ul {
+  //   padding-left: 80px;
+  // }
+
+    .top-questions {
+      font-size: 30px;
+      padding-left: 22px;
+      padding-top: 10px;
+      padding-bottom: 50px;
+      width: 50%
+    }
 
    p {
-     font-size: 48px;
+     font-size: 18px;
+     border-top: 1px solid rgb(207, 207, 207);
    }
 
    .new-question-btn {
      float: right;
+    // position: absolute;
     //  padding: 200px;
      color: white;
      background-color: rgb(41, 130, 247);
@@ -350,7 +362,7 @@
      text-decoration: none;
      border-radius: 10%;
      border: 1px solid rgb(33, 107, 204);
-     width: 12%;
+     width: 13%;
 
     //  position: absolute;
     //  top: -15px;
@@ -398,12 +410,14 @@
  }
 
     .hot-questions {
-     position: absolute;
-     top: 200px;
-     right: -200px;
-    // display: inline-block;
+    //  position: absolute;
+    //  top: 200px;
+    //  right: -200px;
+    // display: block;
+    // width: 500px;
+    float: right;
      height: 300px;
-     width: 200px;
+     width: 100px;
     //  right: 5px;
      background-color: red;
      border: 10px solid red;
@@ -459,13 +473,35 @@
 
 
   .all-answers {
-    font-size: 20px;
+    font-size: 16px;
     // position: relative;
     // display: inline;
-    width: 50%;
+    width: 60%;
+    // height: 800px;
     margin-left: 200px;
+
+    .single-answer {
+      border-bottom: 1px solid rgb(223, 223, 223);
+
+    }
+
+    h2 {
+      border-bottom: 1px solid rgb(223, 223, 223);
+
+    }
 
     // div {
     //   margin-left: 200px;
     // }
+  }
+
+  // .single-question {
+  //   border-top: gray;
+  //   border-bottom: gray;
+  // }
+
+
+  .new-answer {
+    // font-size: 100px;
+    padding: 200px;
   }

@@ -21,7 +21,7 @@ class QuestionItem extends React.Component {
         return (
         <div>
             <p><Link to={`/questions/${this.props.question.id}`}>{this.props.question.title}</Link></p>
-                <p>Asked by: {this.props.question.username}</p>
+                <span>Asked by: {this.props.question.username}</span>
                 
             {/* <p>{this.props.question.body}</p> */}
         </div>

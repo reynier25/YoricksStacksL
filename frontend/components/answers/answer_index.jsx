@@ -7,13 +7,21 @@ class AnswerIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAnswers(this.props.match.params.questionId);
+        this.props.fetchAnswers(this.props.questionId);
+        this.initialAnswers = this.props.answers
     }
+
+    // componentDidUpdate() {
+    //     if (this.props.answers !== this.initialAnswers) {
+    //         this.props.fetchAnswers(this.props.questionId);
+    //         // this.setState({ answers: this.props.answers });
+    //     }
+    // }
 
 
     render() {
         const { answers } = this.props;
-        debugger;
+        // debugger;
         return (
             <header className="all-answers">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
@@ -26,7 +34,7 @@ class AnswerIndex extends React.Component {
                             //     key={`${question.id}`}
                             //     question={question} />
                             
-                            <div key={`${answer.id}`} answer={answer}>
+                            <div className="single-answer" key={`${answer.id}`} answer={answer}>
                                 <br />
                                 <br/>
                                 {answer.body}
@@ -44,6 +52,7 @@ class AnswerIndex extends React.Component {
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                 {/* <button>Ask Question</button> */}
 
+                
 
                 {/* <div className="hot-questions">HOT NETWORK QUESTIONS GO HERE</div> */}
             </header>

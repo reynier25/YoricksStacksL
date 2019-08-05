@@ -12,10 +12,19 @@ const receiveAnswers = answers => ({
     answers
 })
 
-export const postAnswer = (answer) => dispatch => (
-    APIUtil.postAnswer(answer)
-    .then(answer => dispatch(receiveAnswer(answer)))
-)
+export const postAnswer = answer => {
+    return dispatch => {
+        return APIUtil.postAnswer(answer).then(
+            answer => dispatch(receiveAnswer(answer)),
+            error => { debugger }
+        )
+    }
+}
+
+// export const postAnswer = (answer) => dispatch => (
+//     APIUtil.postAnswer(answer)
+//     .then(answer => dispatch(receiveAnswer(answer)))
+// )
 
 export const fetchAnswer = (id) => dispatch => (
     APIUtil.fetchAnswer(id)

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AnswerIndex from './answer_index';
-import { fetchAnswers } from '../../actions/answers';
+import { fetchAnswers, postAnswer } from '../../actions/answers';
 
 const mapStateToProps = state => ({
     answers: Object.keys(state.entities.answers).map(id => state.entities.answers[id]),
@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchAnswers: (id) => dispatch(fetchAnswers(id))
+    fetchAnswers: (id) => dispatch(fetchAnswers(id)),
+    postAnswer: (answer) => dispatch(postAnswer(answer))
 });
 
 
