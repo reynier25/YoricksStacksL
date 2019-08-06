@@ -43,6 +43,7 @@ class AnswerIndex extends React.Component {
                                     <br/>
                                     answered by: {answer.username}
                                 </div>
+                                <br/>
                             </div>
                             
                         )

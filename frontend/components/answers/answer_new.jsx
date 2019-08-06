@@ -42,14 +42,17 @@ class AnswerNew extends React.Component {
     // }
 
     render() {
+
+        // if (this.state.session.currentUser === null) return null;
+
         return (
             <div className="new-answer">
-                <h2>Submit new answer.</h2>
+                <p>Your Answer</p>
                 <form>
                     {/* <textarea cols="30" rows="10" value={this.state.title} onChange={this.handleInput('title')}></textarea> */}
-                    <br />
-                    <label>Body
-                        <br />
+                    
+                    <label>
+                        
                         {/* <input type="text" value={this.state.body} onChange={this.handleInput('body')} /> */}
                         <textarea cols="100" rows="20" value={this.state.body} onChange={this.handleInput('body')}></textarea>
 
@@ -57,7 +60,7 @@ class AnswerNew extends React.Component {
                     </label>
                     <br />
                     <br />
-                    <button onClick={this.handleSubmit}>Submit Answer</button>
+                    <button onClick={this.handleSubmit}>Post Your Answer</button>
                 </form>
 
             </div>

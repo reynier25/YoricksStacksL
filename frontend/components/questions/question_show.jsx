@@ -38,22 +38,59 @@ class QuestionShow extends React.Component {
         if (!question) return null
 
 
-        return (
+
+        if (this.props.currentUser === null) {
+            return (
+
+                <div className="question-show">
+
+
+                    <h2>{this.props.question.title}</h2>
+                    {this.props.question.body}
+                    <p>Asked by: {this.props.question.username}</p>
+
+                    <AnswerIndexContainer questionId={this.props.questionId} />
+
+                    {/* {localStorage.getItem([this.props.match.params.questionId])} */}
+                </div>
+            )
+        } else {
+            return (
+
+                <div className="question-show">
+
+
+                    <h2>{this.props.question.title}</h2>
+                    {this.props.question.body}
+                    <p>Asked by: {this.props.question.username}</p>
+
+                    <AnswerIndexContainer questionId={this.props.questionId} />
+
+
+                    <AnswerNewContainer questionId={this.props.questionId} />
+
+                    {/* {localStorage.getItem([this.props.match.params.questionId])} */}
+                </div>
+            )
+        }
+
+        // return (
             
-            <div className="question-show">
+        //     <div className="question-show">
 
 
-                <h2>{this.props.question.title}</h2>
-                {this.props.question.body}
-                <p>Asked by: {this.props.question.username}</p>
+        //         <h2>{this.props.question.title}</h2>
+        //         {this.props.question.body}
+        //         <p>Asked by: {this.props.question.username}</p>
 
-                <AnswerIndexContainer questionId={this.props.questionId} />
+        //         <AnswerIndexContainer questionId={this.props.questionId} />
 
-                <AnswerNewContainer questionId={this.props.questionId} />
                 
-                {/* {localStorage.getItem([this.props.match.params.questionId])} */}
-            </div>
-        )
+        //         <AnswerNewContainer questionId={this.props.questionId} />
+                
+        //         {/* {localStorage.getItem([this.props.match.params.questionId])} */}
+        //     </div>
+        // )
     }
 
 }

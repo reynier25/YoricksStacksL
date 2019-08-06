@@ -18,6 +18,7 @@ class QuestionIndex extends React.Component {
         return (
             <header className="all-questions">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
+                
                 <ul>
                     <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p>
                     <div className="top-questions">Top Questions</div>
@@ -26,6 +27,7 @@ class QuestionIndex extends React.Component {
                         questions.map(question => (
                             <QuestionItem
                                 key={`${question.id}`}
+                                currentUser={this.props.currentUser}
                                 question={question} />
                             )
                         )

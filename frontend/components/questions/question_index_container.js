@@ -4,6 +4,7 @@ import { fetchQuestions } from '../../actions/questions';
 
 const mapStateToProps = state => ({
     questions: Object.keys(state.entities.questions).map(id => state.entities.questions[id]),
+    // currentUser: state.session.currentUser,
     question1: state.entities
 });
 
