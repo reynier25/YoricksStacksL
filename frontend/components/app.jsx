@@ -29,6 +29,8 @@ const App = () => (
         {/* <Route path="/" render={(props) => <LeftNavBar {...props} />} /> */}
         {/* <Route exact path="/questions/:questionId" component={AnswerIndexContainer} /> */}
 
+        <Route exact path="/" component={QuestionIndexContainer} />
+
         <Switch>
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
