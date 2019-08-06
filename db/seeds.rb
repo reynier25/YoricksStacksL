@@ -29,3 +29,25 @@ answer1 = Answer.create(body: 'Alas! Poor Yorick! I knew him, Horatio, a fellow 
 answer2 = Answer.create(body: 'present', author_id: user3.id, question_id: question1.id)
 
 
+tag1 = Tag.create(name: 'Shakespeare')
+tag2 = Tag.create(name: 'Beckett')
+tag3 = Tag.create(name: 'logic')
+tag4 = Tag.create(name: 'tragedy')
+tag5 = Tag.create(name: 'Hamlet')
+tag6 = Tag.create(name: 'absurdism')
+tag7 = Tag.create(name: 'vegetable')
+tag8 = Tag.create(name: 'tractatus')
+
+# tq1 = (tag_id: tag1.id, question_id: question1.id)
+
+tq1 = tag1.questions << question1
+tq2 = tag1.questions << question2
+tq3 = tag2.questions << question3
+tq4 = tag3.questions << question4
+tq5 = tag4.questions << question1
+tq6 = tag5.questions << question1
+tq7 = tag5.questions << question2
+tq8 = tag6.questions << question2
+tq9 = tag6.questions << question3
+tq10 = tag7.questions << question3
+tq11 = tag6.questions << question4

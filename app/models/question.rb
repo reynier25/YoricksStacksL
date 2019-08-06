@@ -23,5 +23,7 @@ class Question < ApplicationRecord
     primary_key: :id,
     foreign_key: :question_id
 
+    has_and_belongs_to_many :tags
+
 
 end

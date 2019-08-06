@@ -1,0 +1,1 @@
+json.extract! tag, :id, :name, :question_id
