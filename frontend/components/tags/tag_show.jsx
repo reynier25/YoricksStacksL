@@ -12,6 +12,9 @@ class TagShow extends React.Component {
         this.props.fetchTag(this.props.tagId);
     }
 
+    componentDidUpdate() {
+        true;
+    }
 
     render() {
         // debugger;
@@ -21,14 +24,14 @@ class TagShow extends React.Component {
         // 
 
         // localStorage.setItem(this.props.match.params.questionId, this.props.question.body);
-        if (!tag) return null
+        if (!tag) return null;
 
             return (
 
                 <div className="tag-show">
 
 
-                    <h2>{this.props.tag.name}</h2>
+                    <h2>Question tagged [{this.props.tag.name}]</h2>
 
 
                     {/* {localStorage.getItem([this.props.match.params.questionId])} */}
@@ -36,10 +39,6 @@ class TagShow extends React.Component {
             )
     }
 }
-
-
-
-
 
 
 export default TagShow;

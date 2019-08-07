@@ -1,7 +1,7 @@
 import { RECEIVE_TAGS, RECEIVE_TAG } from '../actions/tags';
 
 export default (state = {}, action) => {
-    Object.freeze
+    Object.freeze(state);
 
     switch (action.type) {
         case RECEIVE_TAGS:
@@ -11,7 +11,7 @@ export default (state = {}, action) => {
             });
             return tags;
         case RECEIVE_TAG:
-            Object.assign({}, state, { [action.tag.id]: action.tag });
+            return Object.assign({}, state, { [action.tag.id]: action.tag });
         default:
             return state;
         

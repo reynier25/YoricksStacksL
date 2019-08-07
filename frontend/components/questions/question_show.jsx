@@ -35,7 +35,7 @@ class QuestionShow extends React.Component {
         // 
 
         // localStorage.setItem(this.props.match.params.questionId, this.props.question.body);
-        if (!question) return null
+        if (!question) return null;
 
 
 
