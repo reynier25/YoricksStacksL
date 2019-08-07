@@ -24,7 +24,7 @@ class Api::TagsController < ApplicationController
     private
 
     def tag_params
-        params.require(:tag).permit(:body, :question_id)
+        params.require(:tag).permit(:body)
     end
 
 end

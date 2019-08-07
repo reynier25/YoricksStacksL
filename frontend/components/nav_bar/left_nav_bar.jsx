@@ -7,9 +7,12 @@ import { withRouter } from 'react-router';
 export default () => {
     let display = (
         <span>
-            <Link className="home-tab" to="/questions">Home</Link>
+            <Link className="home-tab" to="/">Home</Link>
             <br />
             <Link className="home2-tab" to="/questions">Yoricks Stacks</Link>
+            <br />
+            <Link className="home3-tab" to="/tags">Tags</Link>
+
             {/* <Link className="tags-tab" to="/">Sign Up</Link> */}
         </span>
     );

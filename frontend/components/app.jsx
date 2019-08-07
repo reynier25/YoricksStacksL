@@ -13,6 +13,9 @@ import QuestionNew from './questions/question_new';
 import QuestionNewContainer from './questions/question_new_container';
 import AnswerIndexContainer from './answers/answer_index_container';
 import AnswerNewContainer from './answers/answer_new_container';
+import TagIndexContainer from './tags/tag_index_container';
+import TagShowContainer from './tags/tag_show_container';
+
 import LeftNavBar from './nav_bar/left_nav_bar';
 import { withRouter } from 'react-router'
 
@@ -35,8 +38,11 @@ const App = () => (
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
             <Route exact path="/questions" component={QuestionIndexContainer} />
+            <Route exact path="/tags" component={TagIndexContainer} />
 
             <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
+            <Route exact path="/tags/:tagId" component={TagShowContainer} />
+
             <ProtectedRoute exact path="/newquestion" component={QuestionNewContainer} />
 
             {/* <Route path="/questions/:questionId" render={(props) => <QuestionShow {...props} />} /> */}
