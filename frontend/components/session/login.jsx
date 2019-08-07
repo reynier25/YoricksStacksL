@@ -27,34 +27,42 @@ class Login extends React.Component {
     renderErrors() {
         return (
             <div>
-                <ul>
+                <p>
                     {this.props.errors.map((error, index) => (
-                        <li key={`${index}`}>
+                        <p key={`${index}`}>
                             {error}
-                        </li>
+                        </p>
                         )
                     )
                     }
-                </ul>
+                </p>
             </div>
         );
     }
 
     render() {
+        let usernameField;
+        // debugger;
+        if (this.props.errors.length === 0) {
+            usernameField = <input type="text" value={this.state.username} onChange={this.handleInput('username')} />
+        } else {
+            usernameField = <div className="error-username"><input type="text" value={this.state.username} onChange={this.handleInput('username')} /></div>
+        }
+
         return (
             <div className="session-form-login">
                 <img src={window.img} className="mainlogo2" />
 
                 <h2>Log In</h2>
                 {/* <div className="errors">{this.renderErrors()}</div> */}
-                <p>{this.renderErrors()}</p>
                 
                 <form>
 
                     <label>Username
                         <br/>
-                        <input type="text" value={this.state.username} onChange={this.handleInput('username')} />
-
+                        {/* <input type="text" value={this.state.username} onChange={this.handleInput('username')} /> */}
+                        {usernameField}
+                        <p className="errors">{this.renderErrors()}</p>
                     </label>
 
                     <label>Password
