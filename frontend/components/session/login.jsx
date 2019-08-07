@@ -46,7 +46,7 @@ class Login extends React.Component {
         if (this.props.errors.length === 0) {
             usernameField = <input type="text" value={this.state.username} onChange={this.handleInput('username')} />
         } else {
-            usernameField = <div className="error-username"><input type="text" value={this.state.username} onChange={this.handleInput('username')} /></div>
+            usernameField = <input className="error" type="text" value={this.state.username} onChange={this.handleInput('username')} />
         }
 
         return (

@@ -9,16 +9,6 @@
     font-weight: lighter;
   }
 
-  .error-username {
-        font-size: 14px;
-       margin-top: 5px;
-    //    margin-left: 5px;
-       width: 500px;
-       height: 30px;
-       border: 1px solid rgb(255, 3, 3);
-       border-radius: 3%;
-  }
-
 
  .session-form-login {
   //  border: 10px solid black;
@@ -60,6 +50,16 @@
        width: 240px;
        height: 30px;
        border: 1px solid rgb(189, 189, 189);
+       border-radius: 3%;
+     }
+
+     input.error {
+                 font-size: 14px;
+       margin-top: 5px;
+    //    margin-left: 5px;
+       width: 243px;
+       height: 30px;
+       border: 1px solid rgb(255, 3, 3);
        border-radius: 3%;
      }
    }
