@@ -23,6 +23,8 @@ class QuestionIndex extends React.Component {
                     <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p>
                     <div className="top-questions">Top Questions</div>
 
+                    <div className="total-questions">{questions.length} questions</div>
+
                     {
                         questions.map(question => (
                             <QuestionItem
