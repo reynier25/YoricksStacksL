@@ -43,7 +43,7 @@ class QuestionIndex extends React.Component {
         //     </header>
         // )
 <div>
-        <table>
+        <table className="header-table">
             <thead>
                 
                     <tr>
@@ -63,7 +63,7 @@ class QuestionIndex extends React.Component {
                 </thead>
             </table>
 
-            <table>
+            <table className="questions-table">
             <tbody>
                     {
                         questions.map(question => (

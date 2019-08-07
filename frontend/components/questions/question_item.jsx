@@ -30,7 +30,8 @@ class QuestionItem extends React.Component {
 
             <tr>
                 <td className="votes-and-answers-total">
-                    {this.props.question.ids.length}
+                  
+                    {this.props.question.ids.length} <div>answers</div>
                 </td>
                 <td className="question-link">
                     <Link to={`/questions/${this.props.question.id}`}>Q: {this.props.question.title}</Link>
