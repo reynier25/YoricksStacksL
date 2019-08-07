@@ -43,9 +43,11 @@ class Login extends React.Component {
     render() {
         return (
             <div className="session-form-login">
+                <img src={window.img} className="mainlogo2" />
+
                 <h2>Log In</h2>
                 {/* <div className="errors">{this.renderErrors()}</div> */}
-                <h2>{this.renderErrors()}</h2>
+                <p>{this.renderErrors()}</p>
                 
                 <form>
 

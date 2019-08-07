@@ -20,20 +20,27 @@ export default () => {
     // const { match, location, history } = this.props
 
     if (window.location.hash === "#/signup" || window.location.hash === "#/login" || window.location.hash === "#/newquestion") {
-        display = null;
-    }
+        display = (
+            <div className="null-navbar"></div>
+        )
 
-    return (
-        <header className="left-nav-bar">
-            {/* <img src={window.img} className="mainlogo" /> */}
-            {/* <Link className="logo" to="/">YoricksStacks</Link> */}
-            {/* <p className="logo">Yoricks</p> */}
-            {/* <p className="logo2">Stacks</p> */}
-            <span>
-                {display}
-            </span>
-        </header>
-    )
+        return (
+            <span>{display}</span>
+        )
+    } else {
+
+        return (
+            <header className="left-nav-bar">
+                {/* <img src={window.img} className="mainlogo" /> */}
+                {/* <Link className="logo" to="/">YoricksStacks</Link> */}
+                {/* <p className="logo">Yoricks</p> */}
+                {/* <p className="logo2">Stacks</p> */}
+                <span>
+                    {display}
+                </span>
+            </header>
+        )
+    }
 
 
 }

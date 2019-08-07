@@ -44,6 +44,7 @@ class Signup extends React.Component {
     render() {
         return (
             <div className="session-form-signup">
+                
                 <h2>Create your Yoricks Stacks account. It’s free and only takes a minute.</h2>
                 <form>
 

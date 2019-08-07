@@ -20,7 +20,7 @@ class QuestionItem extends React.Component {
     render() {
         return (
         <div>
-            <p><Link to={`/questions/${this.props.question.id}`}>{this.props.question.title}</Link></p>
+            <p><Link to={`/questions/${this.props.question.id}`}>Q: {this.props.question.title}</Link></p>
                 <span>Asked by: {this.props.question.username}</span>
                 
             {/* <p>{this.props.question.body}</p> */}
