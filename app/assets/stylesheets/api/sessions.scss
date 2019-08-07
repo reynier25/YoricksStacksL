@@ -151,6 +151,17 @@
        border: 1px solid rgb(189, 189, 189);
        border-radius: 3%;
      }
+
+     input.error {
+                 font-size: 14px;
+       margin-top: 5px;
+    //    margin-left: 5px;
+       width: 260px;
+       height: 30px;
+       border: 1px solid rgb(255, 3, 3);
+       border-radius: 3%;
+     }
+     
    }
    label {
      padding: 10px;

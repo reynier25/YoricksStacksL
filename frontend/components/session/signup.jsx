@@ -28,23 +28,31 @@ class Signup extends React.Component {
     renderErrors() {
         return (
             <div>
-                <ul>
+                <p>
                     {this.props.errors.map((error, index) => (
-                        <li key={`${index}`}>
+                        <p key={`${index}`}>
                             {error}
-                        </li>
+                        </p>
                     )
                     )
                     }
-                </ul>
+                </p>
             </div>
         );
     }
 
     render() {
+        let passwordField;
+        // debugger;
+        if (this.props.errors.length === 0) {
+            passwordField = <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
+        } else {
+            passwordField = <input className="error" type="password" value={this.state.password} onChange={this.handleInput('password')} />
+        }
+
         return (
             <div className="session-form-signup">
-                
+
                 <h2>Create your Yoricks Stacks account. It’s free and only takes a minute.</h2>
                 <form>
 
@@ -62,8 +70,8 @@ class Signup extends React.Component {
 
                     <label>Password
                         <br />
-                        <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
-
+                        {passwordField}
+                        <p className="errors">{this.renderErrors()}</p>
                     </label>
 
                     <button onClick={this.handleSubmit}>Sign Up</button>
