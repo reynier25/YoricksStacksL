@@ -15,6 +15,8 @@ class TagIndex extends React.Component {
     render() {
         const { tags } = this.props;
         // debugger;
+        if (!tags) return null;
+
         return (
             <header className="all-tags">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
@@ -28,7 +30,7 @@ class TagIndex extends React.Component {
                         tags.map(tag => (
                             <TagItem
                                 key={`${tag.id}`}
-                                currentUser={this.props.currentUser}
+                                // currentUser={this.props.currentUser}
                                 tag={tag} />
                         )
                         )

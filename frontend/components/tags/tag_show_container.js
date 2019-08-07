@@ -9,9 +9,15 @@ const mapStateToProps = (state, ownProps) => ({
     // tag1: state.entities
 });
 
-const mapDispatchToProps = dispatch => ({
-    fetchTag: (id) => dispatch(fetchTag(id))
-});
+// const mapDispatchToProps = dispatch => ({
+//     fetchTag: (id) => dispatch(fetchTag(id))
+// });
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchTag: (id) => dispatch(fetchTag(id))
+    }
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(TagShow);

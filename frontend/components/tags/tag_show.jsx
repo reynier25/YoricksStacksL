@@ -31,7 +31,7 @@ class TagShow extends React.Component {
                 <div className="tag-show">
 
 
-                    <h2>Question tagged [{this.props.tag.name}]</h2>
+                    <h2>Questions tagged [{this.props.tag.name}]</h2>
 
 
                     {/* {localStorage.getItem([this.props.match.params.questionId])} */}
