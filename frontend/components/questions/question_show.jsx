@@ -66,7 +66,7 @@ class QuestionShow extends React.Component {
                     <h2 className="question-header">{this.props.question.title}
                         
                     </h2>
-                    {this.props.question.body}
+                    <div className="question-body">{this.props.question.body}</div>
                     <p>Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />

@@ -225,11 +225,14 @@
     display: inline-block;
     // font-size: 20px;
     // padding: 200px;
-    width: 1000px;
+    width: 990px;
     height: 100%;
     margin-top: 55px;
     margin-left: 190px;
 
+    .question-body {
+      width: 720px;
+    }
 
     h2.question-header {
       font-size: 26px;

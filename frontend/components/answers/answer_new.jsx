@@ -63,6 +63,7 @@ class AnswerNew extends React.Component {
                     <br />
                     <div className="second-line"></div>
                     <button className="post-answer-btn" onClick={this.handleSubmit}>Post Your Answer</button>
+                    <div className="bottom-space"></div>
                 </form>
 
             </div>

@@ -31,7 +31,7 @@ class AnswerIndex extends React.Component {
         return (
             <header className="all-answers">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
-                <h2>{answers.length} {answersSingOrPl}</h2>
+                <h2 className="number-answers">{answers.length} {answersSingOrPl}</h2>
                     {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                     <div>
                     {
