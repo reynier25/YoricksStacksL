@@ -2,6 +2,7 @@ import React from 'react';
 import QuestionItem from './question_item';
 import AnswerNewContainer from '../answers/answer_new_container';
 import AnswerIndexContainer from '../answers/answer_index_container';
+import { Link } from 'react-router-dom';
 
 class QuestionShow extends React.Component {
     constructor(props) {
@@ -44,8 +45,10 @@ class QuestionShow extends React.Component {
 
                 <div className="question-show">
 
+                    <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
+                    <h2>{this.props.question.title}
 
-                    <h2>{this.props.question.title}</h2>
+                    </h2>
                     {this.props.question.body}
                     <p>Asked by: {this.props.question.username}</p>
 
@@ -59,8 +62,10 @@ class QuestionShow extends React.Component {
 
                 <div className="question-show">
 
-
-                    <h2>{this.props.question.title}</h2>
+                    <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
+                    <h2>{this.props.question.title}
+                        
+                    </h2>
                     {this.props.question.body}
                     <p>Asked by: {this.props.question.username}</p>
 

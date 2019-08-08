@@ -16,32 +16,7 @@ class QuestionIndex extends React.Component {
         const { questions } = this.props;
         // debugger;
         return (
-        //     <header className="all-questions">
-        //         {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
-                
-        //         <ul>
-        //             <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p>
-        //             <div className="top-questions">Top Questions</div>
 
-        //             <div className="total-questions">{questions.length} questions</div>
-
-        //             {
-        //                 questions.map(question => (
-        //                     <QuestionItem
-        //                         key={`${question.id}`}
-        //                         currentUser={this.props.currentUser}
-        //                         question={question} />
-        //                     )
-        //                 )
-        //             }
-        //         </ul>
-        //         {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
-        //         {/* <button>Ask Question</button> */}
-
-
-        //         {/* <div className="hot-questions">HOT NETWORK QUESTIONS GO HERE</div> */}
-        //     </header>
-        // )
 <div>
         <table className="header-table">
             <thead>
