@@ -40,7 +40,7 @@ class AnswerIndex extends React.Component {
         let allAnswers =
             answers.map(answer => {
                 if (this.props.currentUser.id === answer.author_id) {
-                    answer.editOption = <Link to={`/questions/${this.props.questionId}/edit`}>Edit Answer</Link>;
+                    answer.editOption = <Link to={`/answers/${answer.id}/edit`}>Edit Answer</Link>;
                     return answer;
                 } else {
                     answer.editOption = null;

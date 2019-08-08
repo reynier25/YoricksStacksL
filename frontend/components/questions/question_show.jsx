@@ -39,7 +39,7 @@ class QuestionShow extends React.Component {
         let editOption;
 
         if (this.props.currentUser.id === question.author_id) {
-            editOption = <Link to={`/questions/${this.props.questionId}/edit`}>EDIT QUESTION</Link>
+            editOption = <Link to={`/questions/${this.props.questionId}/edit`}>Edit Question</Link>
         } else {
             editOption = null;
         }
