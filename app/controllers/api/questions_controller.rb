@@ -23,6 +23,12 @@ class Api::QuestionsController < ApplicationController
 
     end
 
+    def edit
+        @question = Question.find(params[:id])
+
+        render 'api/questions/show'
+    end
+
     # def edit
     #     @question = Question.find(params[:id])
 

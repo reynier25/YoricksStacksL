@@ -50,9 +50,11 @@ class QuestionShow extends React.Component {
 
                     </h2>
                     {this.props.question.body}
+                    
                     <p>Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
+                    <p className="edit-question"><Link to={`/questions/${this.props.questionId}/edit`}>EDIT QUESTION</Link></p> 
 
                     {/* {localStorage.getItem([this.props.match.params.questionId])} */}
                 </div>
@@ -70,6 +72,7 @@ class QuestionShow extends React.Component {
                     <p>Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
+                    <p className="edit-question"><Link to={`/questions/${this.props.questionId}/edit`}>EDIT QUESTION</Link></p>
 
 
                     <AnswerNewContainer questionId={this.props.questionId} />

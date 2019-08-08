@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import QuestionShow from './question_show';
-import { fetchQuestion } from '../../actions/questions';
+import QuestionEdit from './question_edit';
+import { updateQuestion, fetchQuestion } from '../../actions/questions';
 
 const mapStateToProps = (state, ownProps) => ({
     questionId: ownProps.match.params.questionId,
@@ -12,9 +12,9 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => {
     return {
         fetchQuestion: (id) => dispatch(fetchQuestion(id)),
-        // updateQuestion: (question) => dispatch(updateQuestion(question))
+        updateQuestion: (question) => dispatch(updateQuestion(question))
         // FROM QUESTION SHOW PAGE: SHOULD BE ABLE TO CLICK TO GO TO EDIT PAGE, QUESTION EDIT CONTAINER, THERE PASS UPDATEQUESTION PROP
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(QuestionShow);
+export default connect(mapStateToProps, mapDispatchToProps)(QuestionEdit);

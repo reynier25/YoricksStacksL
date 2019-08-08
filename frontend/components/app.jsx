@@ -16,6 +16,8 @@ import AnswerNewContainer from './answers/answer_new_container';
 import TagIndexContainer from './tags/tag_index_container';
 import TagShowContainer from './tags/tag_show_container';
 
+import QuestionEditContainer from './questions/question_edit_container';
+
 import LeftNavBar from './nav_bar/left_nav_bar';
 import { withRouter } from 'react-router'
 
@@ -41,6 +43,8 @@ const App = () => (
             <Route exact path="/tags" component={TagIndexContainer} />
 
             <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
+            <Route exact path="/questions/:questionId/edit" component={QuestionEditContainer} />
+
             <Route exact path="/tags/:tagId" component={TagShowContainer} />
 
             <ProtectedRoute exact path="/newquestion" component={QuestionNewContainer} />
