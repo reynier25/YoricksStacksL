@@ -35,7 +35,7 @@ class QuestionItem extends React.Component {
                         {this.props.question.ids.length} <div>answers</div>
                         {/* <div className="space-between-counts"></div> */}
                         <br/>
-                        {this.props.question.ids.length} <div>HELLO</div>
+                        {this.props.question.ids.length} <div>votes</div>
 
                 </td>
                 <td className="question-link">
