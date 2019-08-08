@@ -20,3 +20,11 @@ export const fetchAnswers = (questionId) => (
         data: {questionId}
     })
 )
+
+export const updateAnswer = (answer) => (
+    $.ajax({
+        method: 'PATCH',
+        url: `api/answers/${answer.id}`,
+        data: { answer }
+    })
+)

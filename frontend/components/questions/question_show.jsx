@@ -36,6 +36,13 @@ class QuestionShow extends React.Component {
         // localStorage.setItem(this.props.match.params.questionId, this.props.question.body);
         if (!question) return null;
 
+        let editOption;
+
+        if (this.props.currentUser.id === question.author_id) {
+            editOption = <Link to={`/questions/${this.props.questionId}/edit`}>EDIT QUESTION</Link>
+        } else {
+            editOption = null;
+        }
 
 
         if (this.props.currentUser === null) {
@@ -52,7 +59,7 @@ class QuestionShow extends React.Component {
                     <p>Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
-                    <p className="edit-question"><Link to={`/questions/${this.props.questionId}/edit`}>EDIT QUESTION</Link></p> 
+                    <p className="edit-question">{editOption}</p> 
 
                     {/* {localStorage.getItem([this.props.match.params.questionId])} */}
                 </div>
@@ -70,7 +77,7 @@ class QuestionShow extends React.Component {
                     <p>Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
-                    <p className="edit-question"><Link to={`/questions/${this.props.questionId}/edit`}>EDIT QUESTION</Link></p>
+                    <p className="edit-question">{editOption}</p>
 
 
                     <AnswerNewContainer questionId={this.props.questionId} />

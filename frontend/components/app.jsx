@@ -17,6 +17,7 @@ import TagIndexContainer from './tags/tag_index_container';
 import TagShowContainer from './tags/tag_show_container';
 
 import QuestionEditContainer from './questions/question_edit_container';
+import AnswerEditContainer from './answers/answer_edit_container';
 
 import LeftNavBar from './nav_bar/left_nav_bar';
 import { withRouter } from 'react-router'
@@ -44,6 +45,8 @@ const App = () => (
 
             <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
             <Route exact path="/questions/:questionId/edit" component={QuestionEditContainer} />
+            <Route exact path="/answers/:answerId/edit" component={AnswerEditContainer} />
+
 
             <Route exact path="/tags/:tagId" component={TagShowContainer} />
 

@@ -21,21 +21,43 @@ class AnswerIndex extends React.Component {
 
     render() {
         const { answers } = this.props;
+
         let answersSingOrPl;
         if (answers.length === 1) {
             answersSingOrPl = 'Answer';
         } else {
             answersSingOrPl = 'Answers'
         }
+
+
+        // let editOption;
+        // if (this.props.currentUser.id === answer.author_id) {
+        //     editOption = <Link to={`/questions/${this.props.questionId}/edit`}>EDIT QUESTION</Link>
+        // } else {
+        //     editOption = null;
+        // }
+
+        let allAnswers =
+            answers.map(answer => {
+                if (this.props.currentUser.id === answer.author_id) {
+                    answer.editOption = <Link to={`/questions/${this.props.questionId}/edit`}>Edit Answer</Link>;
+                    return answer;
+                } else {
+                    answer.editOption = null;
+                    return answer;
+                }
+            });
+
         // debugger;
         return (
+            
             <header className="all-answers">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                 <h2 className="number-answers">{answers.length} {answersSingOrPl}</h2>
                     {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                     <div>
                     {
-                        answers.map(answer => (
+                        allAnswers.map(answer => (
                             // <QuestionItem
                             //     key={`${question.id}`}
                             //     question={question} />
@@ -48,8 +70,11 @@ class AnswerIndex extends React.Component {
                                 <div className="answered-by">
                                     <br/>
                                     answered by: {answer.username}
+                                    {answer.editOption}
                                 </div>
-                                <br/>
+                                <br />
+                                
+                                {/* <Link to={`/answers/${answer.id}/edit`} >EDIT ANSWER </Link> */}
                             </div>
                             
                         )

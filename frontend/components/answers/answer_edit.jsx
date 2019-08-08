@@ -3,7 +3,7 @@ import React from 'react';
 // import AnswerNewContainer from '../answers/answer_new_container';
 // import AnswerIndexContainer from '../answers/answer_index_container';
 import { Link } from 'react-router-dom';
-import QuestionNewContainer from './question_new_container';
+// import QuestionNewContainer from './question_new_container';
 
 class AnswerEdit extends React.Component {
     constructor(props) {
@@ -18,8 +18,8 @@ class AnswerEdit extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchQuestion(this.props.questionId)
-            .then(() => this.setState({ title: this.props.question.title, body: this.props.question.body }));
+        this.props.fetchAnswer(this.props.answerId)
+            .then(() => this.setState({ body: this.props.answer.body }));
     }
 
     handleInput(type) {
@@ -30,7 +30,7 @@ class AnswerEdit extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.updateQuestion(this.state)
+        this.props.updateAnswer(this.state)
             .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
     }
 
@@ -41,7 +41,7 @@ class AnswerEdit extends React.Component {
 
     render() {
 
-        const { question } = this.props;
+        const { answer } = this.props;
         // if (!question) {
         //     return null;
         // 
@@ -71,7 +71,7 @@ class AnswerEdit extends React.Component {
         // } else {
         return (
 
-            <div className="question-edit">
+            <div className="answer-edit">
 
                 {/* //     <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
                 //     <h2 className="question-header">{this.props.question.title}
@@ -86,16 +86,11 @@ class AnswerEdit extends React.Component {
                 //     <AnswerNewContainer questionId={this.props.questionId} /> */}
 
 
-                <h2>Edit your question</h2>
+                <h2>Edit your answer</h2>
                 <div></div>
                 <form>
                     {/* <textarea cols="30" rows="10" value={this.state.title} onChange={this.handleInput('title')}></textarea> */}
-                    <label>Title
-                        <br />
-                        {/* <input type="text" value={this.state.title} onChange={this.handleInput('title')} /> */}
-                        <input value={this.state.title} onChange={this.handleInput('title')}></input>
-
-                    </label>
+ 
                     <br />
                     <label>Body
                         <br />
@@ -106,7 +101,7 @@ class AnswerEdit extends React.Component {
                     </label>
                     <br />
                     <br />
-                    <button onClick={this.handleSubmit}>Post Your Question</button>
+                    <button onClick={this.handleSubmit}>Post Your Answer</button>
                 </form>
             </div>
         )
@@ -117,4 +112,4 @@ class AnswerEdit extends React.Component {
 // }
 
 
-export default QuestionEdit;
+export default AnswerEdit;

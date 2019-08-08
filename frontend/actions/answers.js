@@ -35,3 +35,8 @@ export const fetchAnswers = (id) => dispatch => (
     APIUtil.fetchAnswers(id)
         .then(answers => dispatch(receiveAnswers(answers)))
 )
+
+export const updateAnswer = (answer) => dispatch => (
+    APIUtil.updateAnswer(answer)
+        .then(answer => dispatch(receiveAnswer(answer)))
+);

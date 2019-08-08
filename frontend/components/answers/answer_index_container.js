@@ -4,7 +4,9 @@ import { fetchAnswers, postAnswer } from '../../actions/answers';
 
 const mapStateToProps = state => ({
     answers: Object.keys(state.entities.answers).map(id => state.entities.answers[id]),
-    question1: state.entities
+    question1: state.entities,
+    currentUser: state.session.currentUser,
+
 });
 
 const mapDispatchToProps = dispatch => ({
