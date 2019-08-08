@@ -92,26 +92,27 @@ class QuestionNew extends React.Component {
     render() {
         return (
             <div className="new-question">
-                <h2>Submit new question.</h2>
+                <h2>Review your question</h2>
+                <div></div>
                 <form>
                     {/* <textarea cols="30" rows="10" value={this.state.title} onChange={this.handleInput('title')}></textarea> */}
                     <label>Title
                         <br />
                         {/* <input type="text" value={this.state.title} onChange={this.handleInput('title')} /> */}
-                        <textarea cols="100" rows="3" value={this.state.title} onChange={this.handleInput('title')}></textarea>
+                        <input value={this.state.title} onChange={this.handleInput('title')}></input>
 
                     </label>
 <br/>
                     <label>Body
                         <br />
                         {/* <input type="text" value={this.state.body} onChange={this.handleInput('body')} /> */}
-                        <textarea cols="100" rows="20" value={this.state.body} onChange={this.handleInput('body')}></textarea>
+                        <textarea cols="102" rows="20" value={this.state.body} onChange={this.handleInput('body')}></textarea>
 
 
                     </label>
                     <br />
                     <br/>
-                    <button onClick={this.handleSubmit}>Submit Question</button>
+                    <button onClick={this.handleSubmit}>Post Your Question</button>
                 </form>
 
             </div>
