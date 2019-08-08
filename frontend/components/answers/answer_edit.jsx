@@ -5,15 +5,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import QuestionNewContainer from './question_new_container';
 
-class QuestionEdit extends React.Component {
+class AnswerEdit extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            title: '',
             body: '',
             author_id: this.props.author_id.id,
-            id: this.props.questionId
+            // id: this.props.questionId
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -46,7 +45,7 @@ class QuestionEdit extends React.Component {
         // if (!question) {
         //     return null;
         // 
-        
+
         // localStorage.setItem(this.props.match.params.questionId, this.props.question.body);
         // if (!question.title) return null;
 
@@ -70,9 +69,9 @@ class QuestionEdit extends React.Component {
         //         </div>
         //     )
         // } else {
-            return (
+        return (
 
-                <div className="question-edit">
+            <div className="question-edit">
 
                 {/* //     <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
                 //     <h2 className="question-header">{this.props.question.title}
@@ -85,35 +84,35 @@ class QuestionEdit extends React.Component {
 
 
                 //     <AnswerNewContainer questionId={this.props.questionId} /> */}
-                    
-                                                                    
-                        <h2>Edit your question</h2>
-                        <div></div>
-                        <form>
-                            {/* <textarea cols="30" rows="10" value={this.state.title} onChange={this.handleInput('title')}></textarea> */}
-                            <label>Title
+
+
+                <h2>Edit your question</h2>
+                <div></div>
+                <form>
+                    {/* <textarea cols="30" rows="10" value={this.state.title} onChange={this.handleInput('title')}></textarea> */}
+                    <label>Title
                         <br />
-                                {/* <input type="text" value={this.state.title} onChange={this.handleInput('title')} /> */}
-                                <input value={this.state.title} onChange={this.handleInput('title')}></input>
+                        {/* <input type="text" value={this.state.title} onChange={this.handleInput('title')} /> */}
+                        <input value={this.state.title} onChange={this.handleInput('title')}></input>
 
-                            </label>
-                            <br />
-                            <label>Body
+                    </label>
+                    <br />
+                    <label>Body
                         <br />
-                                {/* <input type="text" value={this.state.body} onChange={this.handleInput('body')} /> */}
-                                <textarea cols="102" rows="20" value={this.state.body} onChange={this.handleInput('body')}></textarea>
+                        {/* <input type="text" value={this.state.body} onChange={this.handleInput('body')} /> */}
+                        <textarea cols="102" rows="20" value={this.state.body} onChange={this.handleInput('body')}></textarea>
 
 
-                            </label>
-                            <br />
-                            <br />
-                            <button onClick={this.handleSubmit}>Post Your Question</button>
-                        </form>
-                </div>
-            )
-        }
-
+                    </label>
+                    <br />
+                    <br />
+                    <button onClick={this.handleSubmit}>Post Your Question</button>
+                </form>
+            </div>
+        )
     }
+
+}
 
 // }
 

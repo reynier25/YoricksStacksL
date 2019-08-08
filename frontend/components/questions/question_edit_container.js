@@ -6,7 +6,9 @@ const mapStateToProps = (state, ownProps) => ({
     questionId: ownProps.match.params.questionId,
     question: state.entities.questions[ownProps.match.params.questionId],
     currentUser: state.session.currentUser,
-    question1: state.entities
+    question1: state.entities,
+    author_id: { id: state.session.currentUser.id }
+
 });
 
 const mapDispatchToProps = dispatch => {

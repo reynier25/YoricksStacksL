@@ -8,7 +8,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state) => {
     return {
-        author_id: { id: state.session.currentUser.id }
+        author_id: { id: state.session.currentUser.id },
     };
 };
 

@@ -27,9 +27,7 @@ class QuestionShow extends React.Component {
         true;
     }
 
-
     render() {
-        // debugger;
         const {question} = this.props;
         // if (!question) {
         //     return null;

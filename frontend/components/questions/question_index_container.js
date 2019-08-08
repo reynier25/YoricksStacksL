@@ -2,11 +2,14 @@ import { connect } from 'react-redux';
 import QuestionIndex from './question_index';
 import { fetchQuestions } from '../../actions/questions';
 
-const mapStateToProps = state => ({
-    questions: Object.keys(state.entities.questions).map(id => state.entities.questions[id]),
-    // currentUser: state.session.currentUser,
-    question1: state.entities
-});
+const mapStateToProps = state => {
+    // debugger;
+    return {
+        questions: Object.keys(state.entities.questions).map(id => state.entities.questions[id]),
+        // currentUser: state.session.currentUser,
+        question1: state.entities
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     fetchQuestions: () => dispatch(fetchQuestions())
