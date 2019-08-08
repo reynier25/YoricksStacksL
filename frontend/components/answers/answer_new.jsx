@@ -22,7 +22,7 @@ class AnswerNew extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.postAnswer(this.state)
-            .then(() => this.setState({body: '', author_id: '', question_id: ''}))
+            .then(() => this.setState({body: ''}))
         // props.history.push('/')
     }
 

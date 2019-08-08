@@ -21,11 +21,17 @@ class AnswerIndex extends React.Component {
 
     render() {
         const { answers } = this.props;
+        let answersSingOrPl;
+        if (answers.length === 1) {
+            answersSingOrPl = 'Answer';
+        } else {
+            answersSingOrPl = 'Answers'
+        }
         // debugger;
         return (
             <header className="all-answers">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
-                <h2>Answers</h2>
+                <h2>{answers.length} {answersSingOrPl}</h2>
                     {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                     <div>
                     {
@@ -36,10 +42,10 @@ class AnswerIndex extends React.Component {
                             
                             <div className="single-answer" key={`${answer.id}`} answer={answer}>
                                 <br />
-                                <br/>
+                                {/* <br/> */}
                                 {answer.body}
                                 
-                                <div>
+                                <div className="answered-by">
                                     <br/>
                                     answered by: {answer.username}
                                 </div>
