@@ -229,14 +229,14 @@
 
 
   .left-nav-bar {
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 8px;
     display: flex;
     position: fixed;
     width: 156px;
     height: 800px;
     font-size: 14px;
-    padding-top: 52px;
+    padding-top: 32px;
     border-right: 1px solid rgb(202, 202, 202);
     // border: 1px solid black;
 
@@ -246,6 +246,7 @@
       div {
         font-size: 12px;
         margin-bottom: 10px;
+        
       }
 
       a {
