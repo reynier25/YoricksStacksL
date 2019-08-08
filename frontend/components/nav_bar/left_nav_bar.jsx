@@ -9,9 +9,13 @@ export default () => {
         <span>
             <Link className="home-tab" to="/">Home</Link>
             <br />
+            <br />
+            <div>PUBLIC</div>
+
             <Link className="home2-tab" to="/questions">Yoricks Stacks</Link>
             <br />
-            <Link className="home3-tab" to="/tags">Tags</Link>
+            <div></div>
+            <Link className="home2-tab" to="/tags">Tags</Link>
 
             {/* <Link className="tags-tab" to="/">Sign Up</Link> */}
         </span>
@@ -35,9 +39,9 @@ export default () => {
                 {/* <Link className="logo" to="/">YoricksStacks</Link> */}
                 {/* <p className="logo">Yoricks</p> */}
                 {/* <p className="logo2">Stacks</p> */}
-                <span>
+                {/* <span> */}
                     {display}
-                </span>
+                {/* </span> */}
             </header>
         )
     }
