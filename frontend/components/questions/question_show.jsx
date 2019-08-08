@@ -63,7 +63,7 @@ class QuestionShow extends React.Component {
                 <div className="question-show">
 
                     <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
-                    <h2>{this.props.question.title}
+                    <h2 className="question-header">{this.props.question.title}
                         
                     </h2>
                     {this.props.question.body}
