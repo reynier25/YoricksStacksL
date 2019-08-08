@@ -78,9 +78,11 @@
     //   border: 1px solid black;
       border-bottom: 1px solid rgb(207, 207, 207);
       padding-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 40px;
       width: 80%;
     //   margin-bottom: 30px;
-    padding-bottom: 110px;
+    // padding-bottom: 110px;
       font-size: 16px;
       text-decoration: none;
   }
@@ -98,16 +100,34 @@
       padding-left: 26px;
       margin-left: 100px;
       width: 18%;
+      // border: 1px solid black;
     //   margin-right: 10px;
       text-align: center;
       font-size: 22px;
       font-weight: lighter;
       color: rgb(97, 97, 97);
     //   padding-left: 70px;
+
+  }
+
+  div.space-between-counts {
+    height: 1px;
+    padding-top: 20px;
+  }
+
+  td.votes-total {
+    padding-top: 100px;
+    // border: 1px solid black;
   }
 
   td.question-link {
+    // float: top;
+    vertical-align: top;
+    padding-top: 20px;
+    // border: 1px solid black;
       width: 74%;
+      // text-align: center;
+      // margin-top: -100px;
   }
 
   td > div {

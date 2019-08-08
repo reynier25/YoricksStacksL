@@ -39,7 +39,7 @@ class QuestionIndex extends React.Component {
             </table>
 
             <table className="questions-table">
-            <tbody>
+            
                     {
                         questions.map(question => (
                             <QuestionItem
@@ -50,7 +50,7 @@ class QuestionIndex extends React.Component {
                         )
                     }
 
-                </tbody>
+                
             </table>
             </div>
         )
