@@ -32,3 +32,28 @@
             // width: 300px;
         }
     }
+
+
+
+    .new-answer {
+        
+        label {
+            // padding-top: 100px;
+            padding-bottom: 3px;
+            border-bottom: 1px dotted rgb(194, 194, 194);
+        }
+
+        // .post-answer-btn {
+        //     // margin-top: 20px;
+        //     // padding-top: 30px;
+        //     border: 1px solid black;
+        //     // border-top: 1px dotted rgb(194, 194, 194);
+
+        // }
+        .second-line {
+            height: 1px;
+            border-top: 1px dotted rgb(194, 194, 194);
+            width: 623px;
+            margin-bottom: 20px;
+        }
+    }
