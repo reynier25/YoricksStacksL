@@ -70,6 +70,8 @@ class AnswerIndex extends React.Component {
                                 <div className="answered-by">
                                     <br/>
                                     answered by: {answer.username}
+                                    <br/>
+                                    <br/>
                                     {answer.editOption}
                                 </div>
                                 <br />

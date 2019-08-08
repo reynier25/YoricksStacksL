@@ -51,6 +51,8 @@ class QuestionShow extends React.Component {
                 <div className="question-show">
 
                     <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
+                    <p className="edit-question-btn">{editOption}</p>
+
                     <h2>{this.props.question.title}
 
                     </h2>
@@ -59,7 +61,6 @@ class QuestionShow extends React.Component {
                     <p>Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
-                    <p className="edit-question">{editOption}</p> 
 
                     {/* {localStorage.getItem([this.props.match.params.questionId])} */}
                 </div>
@@ -70,14 +71,15 @@ class QuestionShow extends React.Component {
                 <div className="question-show">
 
                     <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
+                    <p className="edit-question-btn">{editOption}</p>
                     <h2 className="question-header">{this.props.question.title}
                         
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
-                    <p>Asked by: {this.props.question.username}</p>
+                    <p className="asked-by">Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
-                    <p className="edit-question">{editOption}</p>
+
 
 
                     <AnswerNewContainer questionId={this.props.questionId} />

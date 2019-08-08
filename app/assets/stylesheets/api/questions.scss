@@ -232,6 +232,13 @@
 
     .question-body {
       width: 720px;
+      padding-bottom: 100px;
+    }
+
+    .asked-by {
+      float: right;
+      padding-right: 320px;
+      padding-top: 30px;
     }
 
     // .edit-question {
@@ -263,6 +270,29 @@
     }
 
     .ask-question-btn > a:hover {
+    background-color:  rgb(29, 91, 172);
+    box-shadow: 1px 1px 1px rgb(13, 13, 167);
+    cursor: pointer;
+    }
+
+    .edit-question-btn > a {
+     float: right;
+     margin-right: 5px;
+     margin-top: 0px;
+     color: white;
+     background-color: rgb(41, 130, 247);
+     padding: 11px 8px 11px;
+     box-shadow: 1px 1px 1px rgb(220, 220, 228);
+     text-decoration: none;
+     border-radius: 5%;
+     border: 1px solid rgb(33, 107, 204);
+     width: 85px;
+     font-size: 13px;
+     border-top: 1px solid rgb(207, 207, 207);
+        // font-size: 200px;
+    }
+
+    .edit-question-btn > a:hover {
     background-color:  rgb(29, 91, 172);
     box-shadow: 1px 1px 1px rgb(13, 13, 167);
     cursor: pointer;
@@ -333,4 +363,6 @@
     box-shadow: 1px 1px 1px rgb(13, 13, 167);
     cursor: pointer;
     }
+
+
   }
