@@ -9,6 +9,8 @@ class QuestionShow extends React.Component {
         super(props);
 
         this.handleUpvote = this.handleUpvote.bind(this);
+        this.handleDownvoteToZeroQuestion = this.handleDownvoteToZeroQuestion.bind(this);
+
 
         if (this.props.currentUser === null) {
             this.question_vote = null;
@@ -31,6 +33,12 @@ class QuestionShow extends React.Component {
     handleUpvote(e) {
         e.preventDefault();
         this.props.upvoteQuestion(this.question_vote)
+            .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
+    }
+
+    handleDownvoteToZeroQuestion(e) {
+        e.preventDefault();
+        this.props.downvoteToZeroQuestion(this.question_vote)
             .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
     }
 
@@ -78,7 +86,7 @@ class QuestionShow extends React.Component {
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
                     <button className="upvote-button" onClick={this.handleUpvote}></button>
-                    
+                    <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}>DOWNVOTE ME</button>
                     <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
                     
                     <p className="asked-by">Asked by: {this.props.question.username}</p>
@@ -100,6 +108,8 @@ class QuestionShow extends React.Component {
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
                     <button className="upvote-button" onClick={this.handleUpvote}></button>
+                    <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}>DOWNVOTE ME</button>
+
                     <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
 
                     <p className="asked-by">Asked by: {this.props.question.username}</p>

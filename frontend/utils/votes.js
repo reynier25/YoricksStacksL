@@ -14,6 +14,13 @@ export const fetchAllVotes = (questionId) => (
     })
 )
 
+export const downvoteToZeroQuestion = (question_vote) => (
+    $.ajax({
+        method: 'DELETE',
+        url: `api/question_votes/${question_vote}`,
+        data: { question_vote }
+    })
+)
 
 // export const fetchAnswers = (questionId) => (
 //     $.ajax({

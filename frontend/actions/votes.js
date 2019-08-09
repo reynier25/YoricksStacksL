@@ -14,6 +14,11 @@ const receiveVotes = votes => ({
 });
 
 
+export const downvoteToZeroQuestion = (vote) => dispatch => (
+    APIUtil.downvoteToZeroQuestion(vote)
+        .then(vote => dispatch(receiveVote(vote)))
+);
+
 export const upvoteQuestion = (vote) => dispatch => (
     APIUtil.upvoteQuestion(vote)
         .then(vote => dispatch(receiveVote(vote)))
