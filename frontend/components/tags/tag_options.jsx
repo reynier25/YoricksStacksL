@@ -9,21 +9,23 @@ class TagOptions extends React.Component {
         // debugger;
         allTags = this.props.tags.map(tag => {
             return (
-                <label htmlFor="">
+                <td>
+                    <label>
                     {tag.name}
                     <input type="checkbox"></input>
                 </label>
-                // <div type="checkbox">{tag.name}</div>
+                </td>
             );
         });
 
             // < input type = "checkbox" name = "vehicle1" value = "Bike" >
 
         return (
-            <div>
+            <table className="tag-table">
+                <h2>Tags</h2>
                 {allTags}
 
-           </div>
+           </table>
 
         )
     }
