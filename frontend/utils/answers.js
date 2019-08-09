@@ -27,4 +27,4 @@ export const updateAnswer = (answer) => (
         url: `api/answers/${answer.id}`,
         data: { answer }
     })
-)
+);

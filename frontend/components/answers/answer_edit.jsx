@@ -12,7 +12,7 @@ class AnswerEdit extends React.Component {
         this.state = {
             body: '',
             author_id: this.props.author_id.id,
-            // id: this.props.questionId
+            id: this.props.answerId,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -31,7 +31,7 @@ class AnswerEdit extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.updateAnswer(this.state)
-            .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
+            .then(() => this.props.history.push(`/questions/${this.props.answer.question_id}`))
     }
 
     // componentDidUpdate() {
