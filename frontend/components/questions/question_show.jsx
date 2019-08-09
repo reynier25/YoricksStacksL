@@ -7,25 +7,28 @@ import { Link } from 'react-router-dom';
 class QuestionShow extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleUpvote = this.handleUpvote.bind(this);
+
     }
 
     componentDidMount() {
         this.props.fetchQuestion(this.props.questionId);
+        this.props.fetchAllVotes();
     }
 
-    // componentWillReceive(nextProps) {
 
-    //     const internalState = nextProps.question;
-    //     this.setState({ internalState });
+    handleUpvote(e) {
+        e.preventDefault();
+        this.props.upvoteQuestion()
+            .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
+    }
 
-        // update your internal state that depends on the props
-        // const internalState = nextProps.something
-        // this.setState({internalState}
+    // handleDownvote(e) {
+    //     e.preventDefault();
+    //     this.props.downvoteQuestion()
+    //         .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
     // }
-
-    componentDidUpdate() {
-        true;
-    }
 
     render() {
         const {question} = this.props;
@@ -57,6 +60,9 @@ class QuestionShow extends React.Component {
 
                     </h2>
                     {this.props.question.body}
+
+                    <button onClick={this.handleUpvote}>Upvote Me</button>
+                    <div className="question-vote">{this.props.questionVotes.length}</div>
                     
                     <p>Asked by: {this.props.question.username}</p>
 
@@ -76,6 +82,10 @@ class QuestionShow extends React.Component {
                         
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
+
+                    <button onClick={this.handleUpvote}>Upvote Me</button>
+                    <div className="question-vote">HELLO{this.props.questionVotes.length}</div>
+
                     <p className="asked-by">Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
@@ -88,6 +98,8 @@ class QuestionShow extends React.Component {
                 </div>
             )
         }
+
+        // <button onClick={this.handleSubmit}>Post Your Answer</button>
 
         // return (
             
