@@ -26,15 +26,16 @@ class Api::QuestionVotesController < ApplicationController
     def destroy
         @question_vote = QuestionVote.find_by(
             question_id: params[:questionId],
-            user_id: 1
+            user_id: 5
         )
+        render 'api/question_votes/show'
 
-        if @question_vote
-            @question_vote.destroy
-            render 'api/question_votes/show'
-        else
-            render json: @question_vote.errors.full_messages, status: 402
-        end
+        # if @question_vote
+        #     @question_vote.destroy
+        #     render 'api/question_votes/show'
+        # else
+        #     # render json: @question_vote.errors.full_messages, status: 402
+        # end
 
 
     end
