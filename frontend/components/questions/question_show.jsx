@@ -10,10 +10,15 @@ class QuestionShow extends React.Component {
 
         this.handleUpvote = this.handleUpvote.bind(this);
 
-        this.question_vote = {
-            user_id: this.props.currentUser.id,
-            question_id: this.props.questionId,
-            upvoted: true
+        if (this.props.currentUser === null) {
+            this.question_vote = null;
+        } else {
+
+            this.question_vote = {
+                user_id: this.props.currentUser.id,
+                question_id: this.props.questionId,
+                upvoted: true
+            }
         }
     }
 
@@ -68,15 +73,15 @@ class QuestionShow extends React.Component {
                     <p className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></p>
                     <p className="edit-question-btn">{editOption}</p>
 
-                    <h2>{this.props.question.title}
+                    <h2 className="question-header">{this.props.question.title}
 
                     </h2>
-                    {this.props.question.body}
-
-                    <button className="upvote-button" onClick={this.handleUpvote}>Upvote Me</button>
-                    <div className="question-vote">{this.props.questionVotes.length}</div>
+                    <div className="question-body">{this.props.question.body}</div>
+                    <button className="upvote-button" onClick={this.handleUpvote}></button>
                     
-                    <p>Asked by: {this.props.question.username}</p>
+                    <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
+                    
+                    <p className="asked-by">Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
 
