@@ -25,6 +25,8 @@ class QuestionNew extends React.Component {
         this.props.fetchTags();
     }
 
+    // invoke this.props.postQuestionTag? can just chain, right?
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.postQuestion(this.state)

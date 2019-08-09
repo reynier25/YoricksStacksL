@@ -4,11 +4,13 @@ import questionsReducer from './questions_reducer';
 import answersReducer from './answers_reducer';
 import tagsReducer from './tags_reducer';
 import questionVotesReducer from './question_votes_reducer';
+import questionTagsReducer from './question_tags_reducer';
 
 export default combineReducers({
     users: usersReducer,
     questions: questionsReducer,
     answers: answersReducer,
     tags: tagsReducer,
-    questionVotes: questionVotesReducer
+    questionVotes: questionVotesReducer,
+    questionTags: questionTagsReducer
 });

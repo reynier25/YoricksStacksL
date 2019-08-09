@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 import { postQuestion } from '../../actions/questions';
 import QuestionNew from './question_new';
 import { fetchTags } from '../../actions/tags';
+import { postQuestionTag } from '../../actions/question_tags';
 
 const mapDispatchToProps = dispatch => ({
     postQuestion: question => dispatch(postQuestion(question)),
-    fetchTags: () => dispatch(fetchTags())
+    fetchTags: () => dispatch(fetchTags()),
+    postQuestionTag: (questionTag) => dispatch(postQuestionTag(questionTag))
 });
 
 const mapStateToProps = (state) => {
