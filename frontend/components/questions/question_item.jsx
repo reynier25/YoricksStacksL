@@ -39,7 +39,9 @@ class QuestionItem extends React.Component {
 
                 </td>
                 <td className="question-link">
-                    <Link to={`/questions/${this.props.question.id}`}>Q: {this.props.question.title}</Link>
+                        <Link to={`/questions/${this.props.question.id}`}>Q: {this.props.question.title}</Link>
+                        <div className="question-author">asked by
+                        <br/>{this.props.question.username}</div>
                     </td>
                     {/* <td className="votes-total">
                         {this.props.question.ids.length} <div>HELLO</div>
