@@ -9,7 +9,8 @@ class QuestionNew extends React.Component {
         this.state = {
             title: '',
             body: '',
-            author_id: this.props.author_id.id
+            author_id: this.props.author_id.id,
+
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }

@@ -8,3 +8,6 @@ class QuestionVote < ApplicationRecord
     belongs_to :question
 
 end
+
+
+# uniqueness validation scoped to question's id

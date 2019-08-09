@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :answers, only: [:create, :index, :show, :update, :edit]
     resources :tags, only: [:create, :index, :show]
     resources :question_votes, only: [:create, :destroy, :index]
+    resources :question_tags, only: [:create]
   end
 
   root "static_pages#root"
