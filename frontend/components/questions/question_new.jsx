@@ -1,4 +1,5 @@
 import React from 'react';
+import TagOptions from '../tags/tag_options';
 
 class QuestionNew extends React.Component {
 
@@ -17,6 +18,10 @@ class QuestionNew extends React.Component {
         return (e) => {
             this.setState({ [type]: e.target.value });
         }
+    }
+
+    componentDidMount() {
+        this.props.fetchTags();
     }
 
     handleSubmit(e) {
@@ -63,7 +68,9 @@ class QuestionNew extends React.Component {
 
                     </label>
                     <br />
-                    <br/>
+                    <br />
+                    <TagOptions
+                        tags={this.props.tags}></TagOptions>
                     <button onClick={this.handleSubmit}>Post Your Question</button>
                 </form>
 

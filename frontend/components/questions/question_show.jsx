@@ -86,9 +86,9 @@ class QuestionShow extends React.Component {
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
                     <button className="upvote-button" onClick={this.handleUpvote}></button>
-                    <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}>DOWNVOTE ME</button>
                     <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
-                    
+                    <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}></button>
+
                     <p className="asked-by">Asked by: {this.props.question.username}</p>
 
                     <AnswerIndexContainer questionId={this.props.questionId} />
@@ -108,9 +108,9 @@ class QuestionShow extends React.Component {
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
                     <button className="upvote-button" onClick={this.handleUpvote}></button>
-                    <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}>DOWNVOTE ME</button>
 
                     <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
+                    <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}></button>
 
                     <p className="asked-by">Asked by: {this.props.question.username}</p>
 

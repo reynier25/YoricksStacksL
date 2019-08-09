@@ -2,6 +2,7 @@ import * as APIUtil from '../utils/votes';
 
 export const RECEIVE_VOTE = 'RECEIVE_VOTE';
 export const RECEIVE_VOTES = 'RECEIVE_VOTES';
+export const REMOVE_VOTE = 'REMOVE_VOTE';
 
 const receiveVote = vote => ({
     type: RECEIVE_VOTE,
@@ -13,10 +14,16 @@ const receiveVotes = votes => ({
     votes
 });
 
+const removeVote = vote => ({
+    type: REMOVE_VOTE,
+    vote
+})
+
+
 
 export const downvoteToZeroQuestion = (vote) => dispatch => (
     APIUtil.downvoteToZeroQuestion(vote)
-        .then(vote => dispatch(receiveVote(vote)))
+        .then(vote => dispatch(removeVote(vote)))
 );
 
 export const upvoteQuestion = (vote) => dispatch => (
