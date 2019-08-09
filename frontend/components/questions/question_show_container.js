@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => {
     return {
         fetchQuestion: (id) => dispatch(fetchQuestion(id)),
-        upvoteQuestion: () => dispatch(upvoteQuestion()),
+        upvoteQuestion: (vote) => dispatch(upvoteQuestion(vote)),
         fetchAllVotes: (id) => dispatch(fetchAllVotes(id))
         // updateQuestion: (question) => dispatch(updateQuestion(question))
         // FROM QUESTION SHOW PAGE: SHOULD BE ABLE TO CLICK TO GO TO EDIT PAGE, QUESTION EDIT CONTAINER, THERE PASS UPDATEQUESTION PROP

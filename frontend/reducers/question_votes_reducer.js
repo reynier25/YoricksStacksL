@@ -5,7 +5,7 @@ export default (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_VOTE:
-            return Object.assign({}, state, { [action.vote.user_id]: action.vote.upvoted, });
+            return Object.assign({}, state, { [action.vote.user_id]: action.vote.upvoted });
         case RECEIVE_VOTES:
             const question_votes = {};
             action.votes.forEach(vote => {

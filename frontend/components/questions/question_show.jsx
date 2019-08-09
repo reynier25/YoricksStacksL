@@ -10,6 +10,11 @@ class QuestionShow extends React.Component {
 
         this.handleUpvote = this.handleUpvote.bind(this);
 
+        this.question_vote = {
+            user_id: this.props.currentUser.id,
+            question_id: this.props.questionId,
+            upvoted: true
+        }
     }
 
     componentDidMount() {
@@ -20,7 +25,7 @@ class QuestionShow extends React.Component {
 
     handleUpvote(e) {
         e.preventDefault();
-        this.props.upvoteQuestion()
+        this.props.upvoteQuestion(this.question_vote)
             .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
     }
 

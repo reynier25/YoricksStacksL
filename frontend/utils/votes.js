@@ -1,7 +1,8 @@
-export const upvoteQuestion = () => (
+export const upvoteQuestion = (question_vote) => (
     $.ajax({
         method: 'POST',
-        url: 'api/question_votes'
+        url: 'api/question_votes',
+        data: { question_vote }
     })
 )
 
