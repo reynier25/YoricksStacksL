@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# tq1 = (tag_id: tag1.id, question_id: question1.id)
 
 User.destroy_all
 Question.destroy_all
@@ -81,7 +82,7 @@ tag15 = Tag.create(name: 'bad-philosophy')
 tag16 = Tag.create(name: 'continental-philosophy')
 tag17 = Tag.create(name: 'utilitarianism')
 
-# tq1 = (tag_id: tag1.id, question_id: question1.id)
+
 
 tq1 = tag1.questions << question1
 tq2 = tag1.questions << question2
