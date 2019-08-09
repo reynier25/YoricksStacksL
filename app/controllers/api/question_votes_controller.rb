@@ -2,6 +2,9 @@ class Api::QuestionVotesController < ApplicationController
 
     def index
         @question_votes = QuestionVote.all
+
+        question = params[:questionId]
+        @question_votes = QuestionVote.where(question_id: question)
         render 'api/question_votes/index'
     end
 

@@ -19,7 +19,7 @@ export const upvoteQuestion = () => dispatch => (
         .then(vote => dispatch(receiveVote(vote)))
 );
 
-export const fetchAllVotes = () => dispatch => (
-    APIUtil.fetchAllVotes()
+export const fetchAllVotes = (id) => dispatch => (
+    APIUtil.fetchAllVotes(id)
         .then(votes => dispatch(receiveVotes(votes)))
 );

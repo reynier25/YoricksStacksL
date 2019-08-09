@@ -5,14 +5,22 @@ export const upvoteQuestion = () => (
     })
 )
 
-export const fetchAllVotes = () => (
+export const fetchAllVotes = (questionId) => (
     $.ajax({
         method: 'GET',
-        url: 'api/question_votes'
+        url: 'api/question_votes',
+        data: { questionId }
     })
 )
 
 
+// export const fetchAnswers = (questionId) => (
+//     $.ajax({
+//         method: 'GET',
+//         url: 'api/answers',
+//         data: { questionId }
+//     })
+// )
 
 // export const downvoteQuestion = (id) => (
 //     $.ajax({

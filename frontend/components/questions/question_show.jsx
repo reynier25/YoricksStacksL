@@ -14,7 +14,7 @@ class QuestionShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchQuestion(this.props.questionId);
-        this.props.fetchAllVotes();
+        this.props.fetchAllVotes(this.props.questionId);
     }
 
 
@@ -35,9 +35,14 @@ class QuestionShow extends React.Component {
         // if (!question) {
         //     return null;
         // 
-
         // localStorage.setItem(this.props.match.params.questionId, this.props.question.body);
         if (!question) return null;
+
+        // if (Object.keys(this.props.questionVotes).length === 0) {
+        //     debugger;
+        //     return null;
+        // }
+
 
         let editOption;
 
@@ -84,7 +89,7 @@ class QuestionShow extends React.Component {
                     <div className="question-body">{this.props.question.body}</div>
 
                     <button onClick={this.handleUpvote}>Upvote Me</button>
-                    <div className="question-vote">HELLO{this.props.questionVotes.length}</div>
+                    <div className="question-vote">HELLO{Object.keys(this.props.questionVotes).length}</div>
 
                     <p className="asked-by">Asked by: {this.props.question.username}</p>
 
