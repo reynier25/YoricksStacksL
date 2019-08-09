@@ -4,5 +4,7 @@ class Tag < ApplicationRecord
     has_and_belongs_to_many :questions, optional: true
 
     # attr_accessor :question_ids
-
+    
 end
+
+x = "x"
