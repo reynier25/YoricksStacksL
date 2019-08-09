@@ -15,6 +15,40 @@ Features:
 - Uses imports from react-router-dom to facilitate route creation
 
 
+# Overview #
+
+
+## Users ##
+
+Users can create login credentials to gain access to question and answer create/edit functionality. Users supply
+an email address, username, and password which must be at least 6 characters.
+
+## Questions ##
+
+Users can create questions which can be viewed publicly and answered by other logged in users. Questions
+can be edited after submission by the author. The landing page displays all questions, and a count of
+the total questions ever submitted. Each question links to its own page with submitted answers, similarly rendering a count
+of the answers.
+
+
+## Answers ##
+
+Users can create answers which can be viewed publicly. Answers can be edited after submission by the author. Edit forms are pre-filled out with prior submission data.
+
+
+## Tags ##
+
+Users can see a list of all question tags and can search questions by tags.
+
+
+## Voting ##
+
+Users can upvote questions. The upvote count is rendered next to each question on the question show page. Users can also undo question upvotes.
+
+
+
+
+# Sample Pages #
 
 Log in page:
 
