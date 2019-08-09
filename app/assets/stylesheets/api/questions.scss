@@ -327,11 +327,15 @@
       // font-size: 20px;
       // color: blue;
       border-top: white;
-width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid rgb(184, 184, 184);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid rgb(184, 184, 184);
+    }
+
+    .upvote-button:hover {
+      cursor: pointer;
     }
 
   }
