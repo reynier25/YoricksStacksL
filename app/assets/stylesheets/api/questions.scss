@@ -252,8 +252,11 @@
     margin-left: 190px;
 
     .question-body {
-      width: 720px;
-      padding-bottom: 100px;
+      // border: 1px solid black;
+      width: 600px;
+      padding-bottom: 70px;
+      margin-right: 300px;
+      float: right;
     }
 
     .asked-by {
@@ -319,6 +322,17 @@
     cursor: pointer;
     }
 
+    .upvote-button {
+      // border: 1px solid black;
+      // font-size: 20px;
+      // color: blue;
+      border-top: white;
+width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgb(184, 184, 184);
+    }
 
   }
 
@@ -391,6 +405,14 @@
 
 
   .question-vote {
-    font-size: 100px;
-    padding: 300px;
+    font-size: 20px;
+    color: gray;
+    // padding: 100px;
+    // border: 1px solid black;
+    width: 100px;
+    padding-left: 12px;
+  }
+
+  .question-vote:hover {
+    cursor: pointer;
   }

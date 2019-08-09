@@ -37,9 +37,13 @@ class AnswerIndex extends React.Component {
         //     editOption = null;
         // }
 
+
         let allAnswers =
             answers.map(answer => {
-                if (this.props.currentUser.id === answer.author_id) {
+                if (this.props.currentUser === null) {
+                    answer.editOption = null;
+                    return answer;
+                } else if (this.props.currentUser.id === answer.author_id) {
                     answer.editOption = <Link to={`/answers/${answer.id}/edit`}>Edit Answer</Link>;
                     return answer;
                 } else {
@@ -47,12 +51,16 @@ class AnswerIndex extends React.Component {
                     return answer;
                 }
             });
-
+        
+        
         // debugger;
         return (
             
             <header className="all-answers">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
+                <br />
+                <br />
+                
                 <h2 className="number-answers">{answers.length} {answersSingOrPl}</h2>
                     {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                     <div>

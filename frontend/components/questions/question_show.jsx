@@ -46,10 +46,12 @@ class QuestionShow extends React.Component {
 
         let editOption;
 
-        if (this.props.currentUser.id === question.author_id) {
+        if (this.props.currentUser === null) {
+            editOption = null
+        } else if (this.props.currentUser.id === question.author_id) {
             editOption = <Link to={`/questions/${this.props.questionId}/edit`}>Edit Question</Link>
         } else {
-            editOption = null;
+            editOption = null
         }
 
 
@@ -66,7 +68,7 @@ class QuestionShow extends React.Component {
                     </h2>
                     {this.props.question.body}
 
-                    <button onClick={this.handleUpvote}>Upvote Me</button>
+                    <button className="upvote-button" onClick={this.handleUpvote}>Upvote Me</button>
                     <div className="question-vote">{this.props.questionVotes.length}</div>
                     
                     <p>Asked by: {this.props.question.username}</p>
@@ -87,9 +89,8 @@ class QuestionShow extends React.Component {
                         
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
-
-                    <button onClick={this.handleUpvote}>Upvote Me</button>
-                    <div className="question-vote">HELLO{Object.keys(this.props.questionVotes).length}</div>
+                    <button className="upvote-button" onClick={this.handleUpvote}></button>
+                    <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
 
                     <p className="asked-by">Asked by: {this.props.question.username}</p>
 
