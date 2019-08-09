@@ -40,3 +40,4 @@ export const updateAnswer = (answer) => dispatch => (
     APIUtil.updateAnswer(answer)
         .then(answer => dispatch(receiveAnswer(answer)))
 );
+

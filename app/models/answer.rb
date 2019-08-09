@@ -11,7 +11,5 @@ class Answer < ApplicationRecord
     primary_key: :id,
     foreign_key: :question_id
 
-    has_many :votes, as: :votable
-
-
+    
 end
