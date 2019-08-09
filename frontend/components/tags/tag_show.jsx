@@ -1,6 +1,8 @@
 import React from 'react';
 import TagItem from './tag_item';
 import QuestionItem from '../questions/question_item';
+import { Link } from 'react-router-dom'
+
 // import { fetchQuestion } from '../../utils/questions';
 // import { fetchQuestions } from '../../actions/questions';
 // import AnswerNewContainer from '../answers/answer_new_container';
@@ -52,17 +54,20 @@ class TagShow extends React.Component {
             return (
 
                 <div className="tag-show">
-
+                    <div className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></div>
 
                     <h2>Questions tagged [{this.props.tag.name}]</h2>
 
+                    {/* <div className="ask-question-btn"><Link to={`/newquestion`}>Ask Question</Link></div> */}
+                    {/* <Link to={`/newquestion`}>Ask Question</Link> */}
+                    <table>
                     {filteredQuestions.map(question => (
                         <QuestionItem
                             key={`${question.id}`}
                             currentUser={this.props.currentUser}
-                            question={question} />
+                                question={question} />
                     ))}
-
+                    </table>
                     {/* {localStorage.getItem([this.props.match.params.questionId])} */}
                 </div>
             )

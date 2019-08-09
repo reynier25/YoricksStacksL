@@ -50,3 +50,97 @@
     }
 
   }
+
+
+
+  .tag-show {
+    // width: 200px;
+    // float: left;
+    // display: block;
+    h2 {
+      // float: top;
+      font-weight: normal;
+      font-size: 30px;
+      margin-left: 200px;
+    }
+
+    table {
+      margin-top: 100px;
+      margin-left: 50px;
+      // border: 1px solid black;
+      // border-top: 1px solid gray;
+      // width: 300px;
+      // margin-right: 500px;
+      // float: left;
+
+          td.question-link {
+            // float: left;
+      // width: 700px;
+      // float: left;
+      // margin-left: -200px;
+      width: 78%;
+      // border: 1px solid black;
+    }
+
+    // tr {
+    //   float: left;
+    // }
+
+
+    }
+
+
+        div.ask-question-btn > a {
+     float: right;
+     vertical-align: top;
+     margin-right:330px;
+     margin-top: 20px;
+     color: white;
+     background-color: rgb(41, 130, 247);
+     padding: 11px 8px 11px;
+     box-shadow: 1px 1px 1px rgb(220, 220, 228);
+     text-decoration: none;
+     border-radius: 5%;
+     border: 1px solid rgb(33, 107, 204);
+     width: 85px;
+     font-size: 13px;
+     border-top: 1px solid rgb(207, 207, 207);
+        // font-size: 200px;
+    }
+
+    .ask-question-btn > a:hover {
+    background-color:  rgb(29, 91, 172);
+    box-shadow: 1px 1px 1px rgb(13, 13, 167);
+    cursor: pointer;
+    }
+
+
+    tbody > .tag-show {
+      // float: left;
+    }
+
+    // .ask-question-btn > a {
+    //  float: right;
+    //  margin-right: 5px;
+    //  margin-top: 0px;
+    //  color: white;
+    //  background-color: rgb(41, 130, 247);
+    //  padding: 11px 8px 11px;
+    //  box-shadow: 1px 1px 1px rgb(220, 220, 228);
+    //  text-decoration: none;
+    //  border-radius: 5%;
+    //  border: 1px solid rgb(33, 107, 204);
+    //  width: 85px;
+    //  font-size: 13px;
+    //  border-top: 1px solid rgb(207, 207, 207);
+    //     // font-size: 200px;
+    // }
+
+    // .ask-question-btn > a:hover {
+    // background-color:  rgb(29, 91, 172);
+    // box-shadow: 1px 1px 1px rgb(13, 13, 167);
+    // cursor: pointer;
+    // }
+
+
+  }
