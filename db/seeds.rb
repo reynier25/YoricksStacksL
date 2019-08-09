@@ -30,10 +30,10 @@ user17 = User.create(username: 'David Hume', email: 'hume@shakespeare.com', pass
 user18 = User.create(username: 'Johann Fichte', email: 'fichte@shakespeare.com', password: '123456')
 
 
-question1 = Question.create(title: 'Didst anyone knoweth Yorick?', body: 'well?', author_id: user2.id)
+question1 = Question.create(title: 'Didst anyone knoweth Yorick?', body: 'he seemed nice', author_id: user2.id)
 question2 = Question.create(title: 'Art Rosencrantz and Guildenstern dead?', body: 'I hast a book idea ift be true', author_id: user1.id)
 question3 = Question.create(title: 'Is it a carrot or a turnip?', body: 'I am not sure', author_id: user4.id)
-question4 = Question.create(title: 'What is the world?', body: 'Start from the beginning', author_id: user6.id)
+question4 = Question.create(title: 'What is the world?', body: '?', author_id: user6.id)
 question5 = Question.create(title: 'What is your aim in philosophy?', body: 'What do you wish to achieve?', author_id: user6.id)
 question6 = Question.create(title: 'Shall I become an aeronaut?', body: 'If my philosophy is not any good, then I shall become an aeronaut. But if it is good, I shall become a philosopher."', author_id: user7.id)
 question7 = Question.create(title: 'Is Platonic philosophy autocratic?', body: 'I think so, the opposition to an open society has origins in Plato', author_id: user8.id)
@@ -54,7 +54,7 @@ question17 = Question.create(title: 'What is the destination of the scholar?', b
 answer1 = Answer.create(body: 'Alas! Poor Yorick! I knew him, Horatio, a fellow of infinite jest, of most excellent fancy...', author_id: user1.id, question_id: question1.id)
 answer2 = Answer.create(body: 'present', author_id: user3.id, question_id: question1.id)
 answer3 = Answer.create(body: 'Its a turnip', author_id: user5.id, question_id: question3.id)
-answer4 = Answer.create(body: 'The world is all that is the case. The world is the totality of facts, not of things. The world is...', author_id: user7.id, question_id: question4.id)
+answer4 = Answer.create(body: 'The world is all that is the case. The world is the totality of facts, not of things. The world is determined by the facts, and by their being all the facts...', author_id: user7.id, question_id: question4.id)
 answer5 = Answer.create(body: 'To show the fly the way out of the fly-bottle', author_id: user7.id, question_id: question5.id)
 answer6 = Answer.create(body: 'After reading only the first sentence, I said to him "no, you must not become an aeronaut..."', author_id: user9.id, question_id: question6.id)
 answer7 = Answer.create(body: 'Youve made up enough words for a thousand years of bad philosophy to propagate, no more please', author_id: user14.id, question_id: question11.id)
