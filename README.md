@@ -18,7 +18,7 @@ Features:
 
 
 
-![GitHub Logo](/images/logo.png)
+![Yoricks Stacks Logo](https://user-images.githubusercontent.com/44175105/62799565-013ac400-ba96-11e9-83f0-0a1a4ca9cad5.png)
 Format: ![Alt Text](url)
 
 
