@@ -9,6 +9,8 @@ class TagIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchTags();
+        // this.props.fetchQuestions();
+
     }
 
 
@@ -21,7 +23,7 @@ class TagIndex extends React.Component {
             <header className="all-tags">
                 {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                 <div className="top-tags">Tags</div>
-                <table>
+                <table className="tags-table">
                     <tbody>
                     {/* <p className="new-question-btn"><Link to={`/newquestion`}>ASK QUESTION</Link></p> */}
                     {/* <div className="top-tags">Top Tags</div> */}

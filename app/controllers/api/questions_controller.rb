@@ -12,7 +12,14 @@ class Api::QuestionsController < ApplicationController
     end
 
     def index
-        @questions = Question.all
+
+        if params[:tag_id]
+            @questions = Question.all
+        else
+            @questions = Question.all
+        end
+
+        # @questions = Question.all
         render 'api/questions/index'
     end
 

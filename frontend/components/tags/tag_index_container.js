@@ -4,6 +4,7 @@ import { fetchTags } from '../../actions/tags';
 
 const mapStateToProps = state => ({
     tags: Object.keys(state.entities.tags).map(id => state.entities.tags[id]),
+    questions: state.entities.questions
     // currentUser: state.session.currentUser,
     // tag1: state.entities
 });

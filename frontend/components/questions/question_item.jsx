@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom'
 
 class QuestionItem extends React.Component {
     render() {
-
+        // if (!this.props.question) return null;
         return (
         //     <div>
         //         <div>
