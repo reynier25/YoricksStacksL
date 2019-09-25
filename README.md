@@ -6,44 +6,6 @@ Live version: https://yoricks-stacks.herokuapp.com/#/
 Yoricks Stacks is a single page clone of Stack Overflow, a question and answer site for software programming topics.
 Yoricks Stacks was built with a Ruby on Rails stack, with a Postgresql database, and a React/Redux frontend.
 
-Features:
-
-- Users can sign up with an email, username, and password
-- Question/answer authors can edit their posts
-- Users can upvote questions, only once per question/answer
-- Site renders changes to page's DOM so only relevant components are updated on refresh
-- Uses imports from react-router-dom to facilitate route creation
-
-
-# Overview #
-
-
-## Users ##
-
-Users can create login credentials to gain access to question and answer create/edit functionality. Users supply
-an email address, username, and password which must be at least 6 characters.
-
-## Questions ##
-
-Users can create questions which can be viewed publicly and answered by other logged in users. Questions
-can be edited after submission by the author. The landing page displays all questions, and a count of
-the total questions ever submitted. Each question links to its own page with submitted answers, similarly rendering a count
-of the answers.
-
-
-## Answers ##
-
-Users can create answers which can be viewed publicly. Answers can be edited after submission by the author. Edit forms are pre-filled out with prior submission data.
-
-
-## Tags ##
-
-Users can see a list of all question tags and can search questions by tags.
-
-
-## Voting ##
-
-Users can upvote questions. The upvote count is rendered next to each question on the question show page. Users can also undo question upvotes.
 
 
 
