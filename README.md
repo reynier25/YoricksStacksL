@@ -46,3 +46,23 @@ Edit pages have forms pre-filled out with prior submission data:
 
 Users can search questions by tags:
 ![tagged questions](https://user-images.githubusercontent.com/44175105/62800679-ce45ff80-ba98-11e9-915c-c9ff55d3d83e.png)
+
+
+
+
+# Code Snippets #
+QuestionVote model to keep track of user votes on questions:
+
+![questionvote](https://user-images.githubusercontent.com/44175105/65891831-10cddf00-e35a-11e9-8361-75daca0a2c54.png)
+
+QuestionVote controller destroy action, which handles undoing an upvote/downvote:
+
+![questionvotecontroller](https://user-images.githubusercontent.com/44175105/65892287-dc0e5780-e35a-11e9-9835-7fdfd3dc1700.png)
+
+Session login component render:
+
+![sessionlogin](https://user-images.githubusercontent.com/44175105/65892311-e7618300-e35a-11e9-8bbb-2d318812b44a.png)
+
+Entities reducer, representing slice of state:
+
+![reducers](https://user-images.githubusercontent.com/44175105/65892324-ee889100-e35a-11e9-9f1a-b8be6b03ac42.png)
