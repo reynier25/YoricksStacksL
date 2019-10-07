@@ -345,3 +345,68 @@
 // th {
 //   font-size: 100px;
 // }
+
+
+header.landing-page {
+  font-size: 60px;
+  font-weight: 900;
+  // position: relative;
+  // color: white;
+  // background-image: none;
+  // background-color: red;
+
+  .ludwig {
+    width: 75%;
+    height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // justify-content: center;
+    // align-content: center;
+  }
+
+  .description {
+    // position: absolute;
+    width: 80%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  // opacity: 0.5;
+  }
+
+  .blurb {
+    font-size: 30px;
+        width: 50%;
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  // opacity: 0.5;
+  }
+
+  .browse {
+    font-size: 20px;
+          color: white;
+     background-color: rgb(41, 130, 247);
+     padding: 10px;
+    //  box-shadow: 3px 3px 3px rgb(220, 220, 228);
+     text-decoration: none;
+     border-radius: 6%;
+     border: 1px solid rgb(33, 107, 204);
+     position: absolute;
+       top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .browse:hover {
+    background-color:  rgb(29, 91, 172);
+    box-shadow: 1px 1px 1px rgb(13, 13, 167);
+    cursor: pointer;
+  }
+}

@@ -19,6 +19,8 @@ import TagShowContainer from './tags/tag_show_container';
 import QuestionEditContainer from './questions/question_edit_container';
 import AnswerEditContainer from './answers/answer_edit_container';
 
+import LandingPageContainer from './landing_page/landing_page_container';
+
 import LeftNavBar from './nav_bar/left_nav_bar';
 import { withRouter } from 'react-router'
 
@@ -35,7 +37,7 @@ const App = () => (
         {/* <Route path="/" render={(props) => <LeftNavBar {...props} />} /> */}
         {/* <Route exact path="/questions/:questionId" component={AnswerIndexContainer} /> */}
 
-        <Route exact path="/" component={QuestionIndexContainer} />
+        <Route exact path="/" component={LandingPageContainer} />
 
         <Switch>
             <AuthRoute path="/login" component={LoginContainer} />

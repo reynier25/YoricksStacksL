@@ -13,3 +13,11 @@ class Answer < ApplicationRecord
 
     
 end
+
+
+
+def dig_root(num)
+    return num if num < 10
+
+    return (num % 10) + dig_root(num / 10)
+end

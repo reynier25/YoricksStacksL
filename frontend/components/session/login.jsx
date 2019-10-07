@@ -10,6 +10,7 @@ class Login extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
     handleInput(type) {
@@ -20,8 +21,16 @@ class Login extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        debugger;
         this.props.login(this.state)
             .then(() => this.props.history.push('/questions'))
+    }
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        debugger;
+        this.props.login({ username: 'Karl Popper', password: '123456' })
+        .then(() => this.props.history.push('/questions'))
     }
 
     renderErrors() {
@@ -72,8 +81,10 @@ class Login extends React.Component {
                     </label>
 
                     <button onClick={this.handleSubmit}>Log In</button>
+                    <button onClick={this.handleDemoLogin}>Demo Login</button>
                 </form>
 
+                {/* <button onClick={this.handleDemoLogin}>Demo Login</button> */}
             </div>
         );
     }

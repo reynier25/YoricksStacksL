@@ -23,7 +23,7 @@ export default () => {
 
     // const { match, location, history } = this.props
 
-    if (window.location.hash === "#/signup" || window.location.hash === "#/login" || window.location.hash === "#/newquestion") {
+    if (window.location.hash === "#/signup" || window.location.hash === "#/login" || window.location.hash === "#/newquestion" || window.location.hash === "#/") {
         display = (
             <div className="null-navbar"></div>
         )
