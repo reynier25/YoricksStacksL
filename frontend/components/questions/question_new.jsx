@@ -10,6 +10,7 @@ class QuestionNew extends React.Component {
             title: '',
             body: '',
             author_id: this.props.author_id.id,
+            tags: []
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -72,8 +73,9 @@ class QuestionNew extends React.Component {
                     </label>
                     <br />
                     <br />
-                    <TagOptions
-                        tags={this.props.tags}></TagOptions>
+                    {/* <TagOptions
+                        tags={this.props.tags}></TagOptions> */}
+                    
                     <button onClick={this.handleSubmit}>Post Your Question</button>
                 </form>
 
