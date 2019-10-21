@@ -8,6 +8,7 @@
   //  margin-left: 80px;
    width: 700px;
    font-size: 14px;
+  //  border: 10px solid black;
 
     .top-questions {
       font-size: 30px;
@@ -35,14 +36,17 @@
 
  table.header-table {
     //  border: 1px solid black;
-    width: 865px;
+    // width: 865px;
+    width: 70%;
     padding-left: 162px;
     padding-top: 60px;
     
  }
 
  table.questions-table {
-     width: 865px;
+  //  border: 1px solid black;
+    //  width: 865px;
+     width: 70%;
     padding-left: 25px;
     padding-top: 5px;
  }
@@ -77,10 +81,12 @@
   td {
       // border: 1px solid black;
       border-bottom: 1px solid rgb(207, 207, 207);
-      padding-left: 15px;
+      // padding-left: 15px;
+      // margin-left: 100px;
       padding-top: 10px;
       padding-bottom: 40px;
-      width: 80%;
+      // width: 80%;
+      // width: 50%;
     //   margin-bottom: 30px;
     // padding-bottom: 110px;
       font-size: 16px;
@@ -96,10 +102,10 @@
   td.votes-and-answers-total {
     //   border: 1px solid black;
       float: right;
-      padding-right: 12px;
-      padding-left: 28px;
-      margin-left: 100px;
-      width: 18%;
+      // padding-right: 12px;
+      // padding-left: 28px;
+      margin-left: 235px;
+      width: 50%;
       // border: 1px solid black;
       // border-bottom: 1px solid gray;
     //   margin-right: 10px;
@@ -126,7 +132,7 @@
     vertical-align: top;
     padding-top: 20px;
     // border: 1px solid black;
-      width: 74%;
+      width: 84%;
       // text-align: center;
       // margin-top: -100px;
   }
@@ -198,11 +204,23 @@
     display: inline-block;
     // position: relative;
     // float: left;
-    width: 600px;
-    height: 600px;
+    // width: 600px;
+    // height: 600px;
     // padding-top: 100px;
-    margin-top: 135px;
-    margin-left: 290px;
+    // margin-top: 135px;
+    // margin-left: 290px;
+
+    // margin-top: 10%;
+    margin-left: 20%;
+
+    // align-content: center;
+    // justify-content: center;
+    // text-align: center;
+    // width: 100%;
+    // margin-top: 10%;
+    // margin-bottom: auto;
+
+    
     // font-size: 100px;
 
     // textarea {
@@ -213,12 +231,15 @@
     h2 {
         font-weight: normal;
         font-size: 28px;
+        margin-top: 25%;
+        // margin-left: 10%;
         // margin-bottom: 200px;
     }
 
     input {
         height: 26px;
-        width: 630px;
+        // width: 630px;
+        width: 100%;
         border-radius: 3%;
         border: 1px solid rgb(190, 190, 190);
         margin-bottom: 10px;
@@ -227,6 +248,7 @@
 
     textarea {
         border: 1px solid rgb(185, 185, 185);
+        width: 100%;
     }
 
     button {
@@ -258,23 +280,27 @@
     display: inline-block;
     // font-size: 20px;
     // padding: 200px;
-    width: 990px;
+    // width: 990px;
+    width: 100%;
+    
     height: 100%;
     margin-top: 55px;
     margin-left: 190px;
 
     .question-body {
       // border: 1px solid black;
-      width: 600px;
-      padding-bottom: 70px;
+      // width: 600px;
+      // width: 40%;
+      // padding-bottom: 70px;
+      padding-left: 100px;
       margin-right: 300px;
-      float: right;
+      float: left;
     }
 
     .asked-by {
       float: right;
       padding-right: 320px;
-      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     // .edit-question {
@@ -313,7 +339,7 @@
 
     .edit-question-btn > a {
      float: right;
-     margin-right: 5px;
+     margin-right: 100px;
      margin-top: 0px;
      color: white;
      background-color: rgb(41, 130, 247);
@@ -338,6 +364,11 @@
       // border: 1px solid black;
       // font-size: 20px;
       // color: blue;
+      // position: absolute;
+      // margin-left: 100px;
+      // display: inline;
+      float: left;
+      clear: left;
       border-top: white;
       width: 0;
       height: 0;
@@ -360,6 +391,8 @@
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 20px solid rgb(184, 184, 184);
+      float: left;
+      clear: left;
     }
 
     .downvote-button:hover {
@@ -382,11 +415,13 @@
     display: inline-block;
     // position: relative;
     // float: left;
-    width: 600px;
-    height: 600px;
+    // width: 600px;
+    // height: 600px;
     // padding-top: 100px;
-    margin-top: 135px;
-    margin-left: 290px;
+    // margin-top: 135px;
+    margin-top: 10%;
+    // margin-left: 290px;
+    margin-left: 30%;
     // font-size: 100px;
 
     // textarea {
@@ -439,9 +474,11 @@
   .question-vote {
     font-size: 20px;
     color: gray;
+    float: left;
+    clear: left;
     // padding: 100px;
     // border: 1px solid black;
-    width: 100px;
+    // width: 100px;
     padding-left: 12px;
   }
 

@@ -30,9 +30,10 @@ export const downvoteToZeroQuestion = (question_vote) => (
 //     })
 // )
 
-// export const downvoteQuestion = (id) => (
-//     $.ajax({
-//         method: 'GET',
-//         url: `api/tags/${id}`
-//     })
-// )
+export const downvoteQuestion = (question_vote) => (
+    $.ajax({
+        method: 'POST',
+        url: `api/tags/${id}`,
+        data: { question_vote }
+    })
+)

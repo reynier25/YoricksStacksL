@@ -7,7 +7,8 @@ const mapStateToProps = state => {
     return {
         questions: Object.keys(state.entities.questions).map(id => state.entities.questions[id]),
         // currentUser: state.session.currentUser,
-        question1: state.entities
+        question1: state.entities,
+        // questionVotes: state.entities.questionVotes
     }
 };
 

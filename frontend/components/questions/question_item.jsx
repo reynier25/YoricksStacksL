@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom'
 
 class QuestionItem extends React.Component {
     render() {
+        debugger;
         // if (!this.props.question) return null;
         return (
         //     <div>
@@ -32,10 +33,10 @@ class QuestionItem extends React.Component {
             <tr>
                 <td className="votes-and-answers-total">
                   
-                        {this.props.question.ids.length} <div>answers</div>
+                        {this.props.question.answer_ids.length} <div>answers</div>
                         {/* <div className="space-between-counts"></div> */}
                         <br/>
-                        {this.props.question.ids.length} <div>votes</div>
+                        {this.props.question.question_vote_ids.length} <div>votes</div>
 
                 </td>
                 <td className="question-link">

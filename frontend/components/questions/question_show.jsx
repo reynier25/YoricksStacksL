@@ -14,12 +14,19 @@ class QuestionShow extends React.Component {
 
         if (this.props.currentUser === null) {
             this.question_vote = null;
+            this.question_downvote = null;
         } else {
 
             this.question_vote = {
                 user_id: this.props.currentUser.id,
                 question_id: this.props.questionId,
                 upvoted: true
+            }
+
+            this.question_downvote = {
+                user_id: this.props.currentUser.id,
+                question_id: this.props.questionId,
+                upvoted: false
             }
         }
     }
@@ -32,14 +39,37 @@ class QuestionShow extends React.Component {
 
     handleUpvote(e) {
         e.preventDefault();
-        this.props.upvoteQuestion(this.question_vote)
-            .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
+        if (Object.keys(this.props.questionVotes).includes(this.props.currentUser.id.toString())) {
+            if (this.props.questionVotes[this.props.currentUser.id].upvoted === false) {
+                // this.props.downvoteToZeroQuestion(this.question_vote)
+                this.props.downvoteToZeroQuestion(this.props.questionVotes[this.props.currentUser.id.toString()])
+                    .then(() => this.props.fetchAllVotes(this.props.questionId))
+            } // modify reducer to match above state in constructor
+        } else if (!Object.keys(this.props.questionVotes).includes(this.props.currentUser.id.toString())) {
+            this.props.upvoteQuestion(this.question_vote)
+        }
+        // this.props.upvoteQuestion(this.question_vote)
+            // .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
     }
+
+    // handleDownvote(e) {
+    //     e.preventDefault();
+    //     this.props.upvoteQuestion(this.question_downvote)
+    // }
 
     handleDownvoteToZeroQuestion(e) {
         e.preventDefault();
-        this.props.downvoteToZeroQuestion(this.question_vote)
-            .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
+        debugger;
+        if (Object.keys(this.props.questionVotes).includes(this.props.currentUser.id.toString())) {
+            // this.props.downvoteToZeroQuestion(this.question_vote)
+            if (this.props.questionVotes[this.props.currentUser.id].upvoted === true) {
+                this.props.downvoteToZeroQuestion(this.props.questionVotes[this.props.currentUser.id.toString()])
+                    .then(() => this.props.fetchAllVotes(this.props.questionId))
+            } // modify reducer to match above state in constructor
+        } else {
+            this.props.upvoteQuestion(this.question_downvote)
+        }
+            // .then(() => this.props.history.push(`/questions/${this.props.questionId}`))
     }
 
     // handleDownvote(e) {
@@ -72,6 +102,31 @@ class QuestionShow extends React.Component {
             editOption = null
         }
 
+        // let upvoteData;
+        // upvoteData = {
+        //     user_id: this.props.currentUser.id,
+        //     question_id: this.props.questionId,
+        //     upvoted: true
+        // }
+
+        // let downvoteData;
+        // downvoteData = {
+        //     user_id: this.props.currentUser.id,
+        //     question_id: this.props.questionId,
+        //     upvoted: false
+        // }
+
+        let voteValue;
+
+        voteValue = 0;
+        Object.keys(this.props.questionVotes).forEach((key) => {
+            if (this.props.questionVotes[key].upvoted) {
+                voteValue += 1
+            } else {
+                voteValue -= 1
+            }
+        });
+
 
         if (this.props.currentUser === null) {
             return (
@@ -86,7 +141,11 @@ class QuestionShow extends React.Component {
                     </h2>
                     <div className="question-body">{this.props.question.body}</div>
                     <button className="upvote-button" onClick={this.handleUpvote}></button>
-                    <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
+                    {/* <p>&nbsp;</p> */}
+                    {/* <br />
+                    <br />
+                    <br /> */}
+                    <div className="question-vote">{voteValue}</div>
                     <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}></button>
 
                     <p className="asked-by">Asked by: {this.props.question.username}</p>
@@ -109,7 +168,7 @@ class QuestionShow extends React.Component {
                     <div className="question-body">{this.props.question.body}</div>
                     <button className="upvote-button" onClick={this.handleUpvote}></button>
 
-                    <div className="question-vote">{Object.keys(this.props.questionVotes).length}</div>
+                    <div className="question-vote">{voteValue}</div>
                     <button className="downvote-button" onClick={this.handleDownvoteToZeroQuestion}></button>
 
                     <p className="asked-by">Asked by: {this.props.question.username}</p>

@@ -5,14 +5,15 @@
 
     .all-answers {
         // border-bottom: 1px solid black;
-        padding-top: 50px;
-
+        padding-top: 150px;
+        width: 60%;
+        // position: inherit;
         h2 {
             font-size: 20px;
             font-weight: normal;
             border-bottom: 1px solid rgb(202, 202, 202);
             padding-bottom: 20px;
-            width: 685px;
+            // width: 685px;
         }
 
         .number-answers {
@@ -21,11 +22,12 @@
 
         .single-answer {
             // float: top;
-            
+            // position: inherit;
             // border: 1px solid black;
             // border-top: 1px solid rgb(202, 202, 202);
             // border-bottom: 1px solid rgb(202, 202, 202);
-            width: 680px;
+            // width: 680px;
+            width: 100%;
             // margin-top: 100px;
         }
 
@@ -38,13 +40,14 @@
             font-size: 12px;
             color: gray;
             // width: 300px;
+            width: 100%;
         }
     }
 
 
 
     .new-answer {
-        
+        // margin-left: 20%;
         label {
             // padding-top: 100px;
             padding-bottom: 3px;
@@ -85,11 +88,13 @@
     display: inline-block;
     // position: relative;
     // float: left;
-    width: 600px;
-    height: 600px;
+    // width: 600px;
+    // height: 600px;
     // padding-top: 100px;
-    margin-top: 135px;
-    margin-left: 290px;
+    // margin-top: 135px;
+    // margin-left: 290px;
+    margin-top: 10%;
+    margin-left: 30%;
     // font-size: 100px;
 
     // textarea {
