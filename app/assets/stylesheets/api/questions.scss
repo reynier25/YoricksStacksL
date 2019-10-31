@@ -4,11 +4,9 @@
 
  .all-questions {
    background-color: white;
-  //  padding: 45px;
-  //  margin-left: 80px;
    width: 700px;
    font-size: 14px;
-  //  border: 10px solid black;
+
 
     .top-questions {
       font-size: 30px;
@@ -35,8 +33,6 @@
  }
 
  table.header-table {
-    //  border: 1px solid black;
-    // width: 865px;
     width: 70%;
     padding-left: 162px;
     padding-top: 60px;
@@ -44,8 +40,6 @@
  }
 
  table.questions-table {
-  //  border: 1px solid black;
-    //  width: 865px;
      width: 70%;
     padding-left: 25px;
     padding-top: 5px;
@@ -55,15 +49,11 @@
       font-size: 27px;
       font-weight: normal;
      text-decoration: none;
-    //  padding-right: 80px;
      width: 250px;
 
   }
 
   th.title {
-    // float: left;
-    //   width: 100%;
-    //   border: 1px solid black;
       padding-left: -40px;
       width: 30%
   }
@@ -74,21 +64,13 @@
       padding-right: 55px;
       border-bottom: 1px solid rgb(207, 207, 207);
       padding-bottom: 20px;
-    //   border: 1px solid black;
 
   }
 
   td {
-      // border: 1px solid black;
       border-bottom: 1px solid rgb(207, 207, 207);
-      // padding-left: 15px;
-      // margin-left: 100px;
       padding-top: 10px;
       padding-bottom: 40px;
-      // width: 80%;
-      // width: 50%;
-    //   margin-bottom: 30px;
-    // padding-bottom: 110px;
       font-size: 16px;
       text-decoration: none;
   }
@@ -100,20 +82,13 @@
 
 
   td.votes-and-answers-total {
-    //   border: 1px solid black;
       float: right;
-      // padding-right: 12px;
-      // padding-left: 28px;
       margin-left: 235px;
       width: 50%;
-      // border: 1px solid black;
-      // border-bottom: 1px solid gray;
-    //   margin-right: 10px;
       text-align: center;
       font-size: 22px;
       font-weight: lighter;
       color: rgb(97, 97, 97);
-    //   padding-left: 70px;
 
   }
 
@@ -124,34 +99,27 @@
 
   td.votes-total {
     padding-top: 100px;
-    // border: 1px solid black;
+
   }
 
   td.question-link {
-    // float: top;
     vertical-align: top;
     padding-top: 20px;
-    // border: 1px solid black;
       width: 84%;
-      // text-align: center;
-      // margin-top: -100px;
+
   }
 
   td > div {
       font-size: 11px;
-    //   vertical-align: middle;
     float: bottom;
   }
 
   td > div.question-author {
       font-size: 12px;
       vertical-align: bottom;
-    // border: 1px solid black;
     float: right;
     margin-top: 46px;
-    // padding-top: 80px;
     margin-right: 30px;
-    // width: 70px;
     text-align: center;
   }
 
@@ -160,8 +128,6 @@
      float: right;
      margin-right: 1px;
      margin-top: 10px;
-    // position: absolute;
-    //  padding: 200px;
      color: white;
      background-color: rgb(41, 130, 247);
      padding: 11px 8px 11px;
@@ -202,43 +168,18 @@
 
      .new-question {
     display: inline-block;
-    // position: relative;
-    // float: left;
-    // width: 600px;
-    // height: 600px;
-    // padding-top: 100px;
-    // margin-top: 135px;
-    // margin-left: 290px;
 
-    // margin-top: 10%;
     margin-left: 20%;
-
-    // align-content: center;
-    // justify-content: center;
-    // text-align: center;
-    // width: 100%;
-    // margin-top: 10%;
-    // margin-bottom: auto;
-
-    
-    // font-size: 100px;
-
-    // textarea {
-    // width: 100%;
-    // height: 150px;
-    // }
 
     h2 {
         font-weight: normal;
         font-size: 28px;
         margin-top: 25%;
-        // margin-left: 10%;
-        // margin-bottom: 200px;
+
     }
 
     input {
         height: 26px;
-        // width: 630px;
         width: 100%;
         border-radius: 3%;
         border: 1px solid rgb(190, 190, 190);
@@ -278,9 +219,6 @@
 
     .question-show {
     display: inline-block;
-    // font-size: 20px;
-    // padding: 200px;
-    // width: 990px;
     width: 100%;
     
     height: 100%;
@@ -288,10 +226,6 @@
     margin-left: 190px;
 
     .question-body {
-      // border: 1px solid black;
-      // width: 600px;
-      // width: 40%;
-      // padding-bottom: 70px;
       padding-left: 100px;
       margin-right: 300px;
       float: left;
@@ -303,9 +237,6 @@
       padding-bottom: 30px;
     }
 
-    // .edit-question {
-    //   font-size: 50px;
-    // }
 
     h2.question-header {
       font-size: 26px;
@@ -328,7 +259,6 @@
      width: 85px;
      font-size: 13px;
      border-top: 1px solid rgb(207, 207, 207);
-        // font-size: 200px;
     }
 
     .ask-question-btn > a:hover {
@@ -361,12 +291,6 @@
     }
 
     .upvote-button {
-      // border: 1px solid black;
-      // font-size: 20px;
-      // color: blue;
-      // position: absolute;
-      // margin-left: 100px;
-      // display: inline;
       float: left;
       clear: left;
       border-top: white;
@@ -382,9 +306,6 @@
     }
 
     .downvote-button {
-      // border: 1px solid black;
-      // font-size: 20px;
-      // color: blue;
       border-bottom: white;
       width: 0;
       height: 0;
@@ -401,38 +322,18 @@
 
   }
 
-//      a {
-//      text-decoration: none;
-//      color: rgb(8, 119, 194)
-//    }
 
 
-// .question-edit {
-//   padding: 300px;
-// }
 
      .question-edit {
     display: inline-block;
-    // position: relative;
-    // float: left;
-    // width: 600px;
-    // height: 600px;
-    // padding-top: 100px;
-    // margin-top: 135px;
     margin-top: 10%;
-    // margin-left: 290px;
     margin-left: 30%;
-    // font-size: 100px;
 
-    // textarea {
-    // width: 100%;
-    // height: 150px;
-    // }
 
     h2 {
         font-weight: normal;
         font-size: 28px;
-        // margin-bottom: 200px;
     }
 
     input {
@@ -476,9 +377,6 @@
     color: gray;
     float: left;
     clear: left;
-    // padding: 100px;
-    // border: 1px solid black;
-    // width: 100px;
     padding-left: 12px;
   }
 
