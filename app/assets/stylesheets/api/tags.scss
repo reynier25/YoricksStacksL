@@ -5,12 +5,11 @@
 
 
   .all-tags {
-    // position: inline;
-    // display: block;
+
     font-size: 20px;
     padding-left: 180px;
     padding-top: 80px;
-    // padding-bottom: 500px;
+
 
     div {
       font-size: 30px;
@@ -54,11 +53,8 @@
 
 
   .tag-show {
-    // width: 200px;
-    // float: left;
-    // display: block;
+
     h2 {
-      // float: top;
       font-weight: normal;
       font-size: 30px;
       margin-left: 200px;
@@ -67,24 +63,15 @@
     table {
       margin-top: 100px;
       margin-left: 50px;
-      // border: 1px solid black;
-      // border-top: 1px solid gray;
-      // width: 300px;
-      // margin-right: 500px;
-      // float: left;
+
 
           td.question-link {
-            // float: left;
-      // width: 700px;
-      // float: left;
-      // margin-left: -200px;
+
       width: 78%;
-      // border: 1px solid black;
+
     }
 
-    // tr {
-    //   float: left;
-    // }
+
 
 
     }
@@ -105,7 +92,7 @@
      width: 85px;
      font-size: 13px;
      border-top: 1px solid rgb(207, 207, 207);
-        // font-size: 200px;
+
     }
 
     .ask-question-btn > a:hover {
@@ -116,31 +103,10 @@
 
 
     tbody > .tag-show {
-      // float: left;
+
     }
 
-    // .ask-question-btn > a {
-    //  float: right;
-    //  margin-right: 5px;
-    //  margin-top: 0px;
-    //  color: white;
-    //  background-color: rgb(41, 130, 247);
-    //  padding: 11px 8px 11px;
-    //  box-shadow: 1px 1px 1px rgb(220, 220, 228);
-    //  text-decoration: none;
-    //  border-radius: 5%;
-    //  border: 1px solid rgb(33, 107, 204);
-    //  width: 85px;
-    //  font-size: 13px;
-    //  border-top: 1px solid rgb(207, 207, 207);
-    //     // font-size: 200px;
-    // }
 
-    // .ask-question-btn > a:hover {
-    // background-color:  rgb(29, 91, 172);
-    // box-shadow: 1px 1px 1px rgb(13, 13, 167);
-    // cursor: pointer;
-    // }
 
 
   }
@@ -149,11 +115,11 @@
 
   table.tag-table {
     width: 300px;
-    // padding: 300px;
+
     td {
       float: left;
       width: 20%;
       font-size: 13px;
-      // padding-bottom: 30px;
+
     }
   }
