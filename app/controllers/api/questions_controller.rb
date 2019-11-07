@@ -36,12 +36,6 @@ class Api::QuestionsController < ApplicationController
         render 'api/questions/show'
     end
 
-    # def edit
-    #     @question = Question.find(params[:id])
-
-    #     render 'api/questions/edit'
-    # end
-
     def update
         @question = Question.find(params[:id])
 
