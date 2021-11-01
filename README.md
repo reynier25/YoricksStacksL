@@ -1,6 +1,6 @@
 # README
 
-Live version: https://yoricks-stacks.herokuapp.com/#/
+Live version: [I'm an inline-style link](https://yoricks-stacks.herokuapp.com/#/)
 
 
 Yoricks Stacks is a single page clone of Stack Overflow, a question and answer site for software programming topics.
